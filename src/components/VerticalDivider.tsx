@@ -4,7 +4,7 @@ export interface IVerticalDivider {}
 
 const VerticalDivider: React.FC<IVerticalDivider> = ({ }) => {
   return (
-    <div className='bg-divider-500 w-[3px] h-16'>
+    <div className='bg-secondary-500 w-[3px] h-16'>
 
     </div>
   )
