@@ -2,3 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "poppins";
+  src: url("./fonts/Poppins-Medium.ttf");
+}
+
+
+@font-face {
+  font-family: "poppins-bold";
+  src: url("./fonts/Poppins-Bold.ttf");
+}
+
+
+@font-face {
+  font-family: "poppins-semibold";
+  src: url("./fonts/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "poppins-light";
+  src: url("./fonts/Poppins-Light.ttf");
+}
+
+* {
+  box-sizing: border-box !important;
+  transition: ease all 0.5s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #666666;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.80857;
+  font-weight: normal;
+  overflow-x: hidden;
+  background: #ffffff !important;
+  margin: "0px";
+  padding: "0px";
+}

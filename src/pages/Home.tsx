@@ -1,0 +1,64 @@
+import { Group, Stack, Text } from "@mantine/core";
+import React from "react";
+import Jumbotron from "../components/Jumbotron";
+import MainLayout from "../layouts/MainLayout";
+import ketuaLurah from "../assets/img/ketua-lurah.jpg";
+import VerticalDivider from "../components/VerticalDivider";
+import { QuotesIconOutline } from "../assets/icons/Fluent";
+
+export interface IHome {}
+
+const Home: React.FC<IHome> = ({}) => {
+  return (
+    <MainLayout>
+      <Stack className="mb-[600px]">
+        <Jumbotron />
+        <Group className="justify-center w-[80%] self-center gap-20">
+          <Stack>
+            <div className="border-[16px] border-primaryGreen border-r-white border-b-white rounded-full">
+              <img src={ketuaLurah} className="w-64 rounded-full" />
+            </div>
+            <Stack className="gap-0">
+              <Text className="font-poppins-bold text-[22px] text-primary-text-500 self-center">
+                Abdul Mannan
+              </Text>
+              <Text className="font-poppins text-lg text-secondary-text-500 self-center">
+                Ketua Lurah Kelurahan Banyorang
+              </Text>
+            </Stack>
+          </Stack>
+          <Stack className="relative">
+            <QuotesIconOutline
+              size={96}
+              color={"#deddf1"}
+              className="absolute -z-10 right-0 top-0"
+            />
+            <Stack className="gap-0">
+              <Text className="font-poppins-bold text-[22px] text-primary-text-500">
+                Kata Sambutan
+              </Text>
+              <Text className="font-poppins-bold text-[32px] text-secondary-text-500 -mt-2">
+                Dari Ketua Lurah
+              </Text>
+            </Stack>
+            <VerticalDivider />
+            <Text className="w-[600px] text-primary-text-500 tracking-1 text-justify">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
+              nemo minima deserunt ullam at ipsam animi voluptas officia numquam
+              consequatur ad hic, reiciendis enim quo nesciunt atque nam unde
+              incidunt cum quisquam veritatis rem. Excepturi mollitia, odio
+              adipisci iure recusandae voluptas officiis. Eos magni maiores
+              facere omnis ipsa illo tenetur?
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ab
+              repellat at odio perspiciatis vel alias obcaecati reiciendis,
+              soluta quos?
+            </Text>
+          </Stack>
+        </Group>
+      </Stack>
+    </MainLayout>
+  );
+};
+export default Home;

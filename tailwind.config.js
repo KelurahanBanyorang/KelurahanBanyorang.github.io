@@ -36,8 +36,47 @@ module.exports = {
         800: "#76859a",
         900: "#6c7b90"
       },
-      primary: {
-        DEFAULT: "#5F5AF7",
+      primaryBlue: {
+        DEFAULT: "#1C82AD",
+        50: "#918cff",
+        100: "#8782ff",
+        200: "#7d78ff",
+        300: "#736eff",
+        400: "#6964ff",
+        500: "#5f5af7",
+        600: "#5550ed",
+        700: "#4b46e3",
+        800: "#413cd9",
+        900: "#3732cf"
+      },
+      primaryDarkBlue: {
+        DEFAULT: "#00337C",
+        50: "#918cff",
+        100: "#8782ff",
+        200: "#7d78ff",
+        300: "#736eff",
+        400: "#6964ff",
+        500: "#5f5af7",
+        600: "#5550ed",
+        700: "#4b46e3",
+        800: "#413cd9",
+        900: "#3732cf"
+      },
+      primaryDarkerBlue: {
+        DEFAULT: "#13005A",
+        50: "#918cff",
+        100: "#8782ff",
+        200: "#7d78ff",
+        300: "#736eff",
+        400: "#6964ff",
+        500: "#5f5af7",
+        600: "#5550ed",
+        700: "#4b46e3",
+        800: "#413cd9",
+        900: "#3732cf"
+      },
+      primaryGreen: {
+        DEFAULT: "#03C988",
         50: "#918cff",
         100: "#8782ff",
         200: "#7d78ff",
@@ -89,6 +128,12 @@ module.exports = {
         900: "#b6b5c9"
       }
     },
+    fontFamily: {
+      'poppins': ['poppins', 'sans-serif'],
+      'poppins-bold': ['poppins-bold', 'sans-serif'],
+      'poppins-light': ['poppins-light', 'sans-serif'],
+      'poppins-semibold': ['poppins-semibold', 'sans-serif'],
+    },
     fontSize: {
       xs: 10,
       sm: 12,
@@ -106,7 +151,11 @@ module.exports = {
     dropShadow:{
       "1": "0px 1px 4px rgba(0, 0, 0, 0.12)"
     },
-    extend: {}
+    extend: {
+      backgroundImage: {
+        'jumbotron': "url('../src/assets/img/jumbotron.jpg')",
+      },
+    }
   },
   plugins: [],
 }
