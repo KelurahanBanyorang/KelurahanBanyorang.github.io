@@ -5,6 +5,7 @@ import MainLayout from "../layouts/MainLayout";
 import ketuaLurah from "../assets/img/ketua-lurah.jpg";
 import petaDetail from "../assets/img/peta-detail.jpg";
 import dummyMap from "../assets/img/dummy-map.jpg";
+import mapThumbnail from "../assets/img/peta-thumbnail.jpg";
 import VerticalDivider from "../components/VerticalDivider";
 import { LocationIcon, QuotesIconOutline } from "../assets/icons/Fluent";
 import MonografiCircle from "../components/MonografiCircle";
@@ -18,7 +19,7 @@ const Home: React.FC<IHome> = ({}) => {
   console.log(isMoreDisplayed);
   return (
     <MainLayout>
-      <Stack className="mb-[600px]">
+      <Stack className="mb-10">
         <MyModal
           opened={isMapDetailOpened}
           setOpened={setIsMapDetailOpened}
@@ -93,14 +94,14 @@ const Home: React.FC<IHome> = ({}) => {
                 setIsMoreDisplayed(false);
               }}
             >
-              <div className="filter hover:brightness-50 relative">
+              <Stack className="filter hover:brightness-50 relative gap-0">
                 <img
-                  src={dummyMap}
+                  src={mapThumbnail}
                   className={"w-[400px] block cursor-pointer"}
                   alt={"Peta detail kelurahan Banyorang"}
                   onClick={() => setIsMapDetailOpened(true)}
                 />
-                <Stack
+                {/* <Stack
                   className="absolute top-4 left-4"
                   styles={{
                     root: {
@@ -111,8 +112,12 @@ const Home: React.FC<IHome> = ({}) => {
                   <Text className="text-white text-xl font-poppins-semibold hover:text-white">
                     Lihat Pratinjau
                   </Text>
-                </Stack>
-              </div>
+                </Stack> */}
+                <Text className="text-sm text-secondary-text-500 text-center">
+                  Gambar Peta Kelurahan Banyorang, Klik untuk melihat lebih
+                  detail
+                </Text>
+              </Stack>
             </div>
 
             <Text className="text-lg text-primary-text-500 text-justify">

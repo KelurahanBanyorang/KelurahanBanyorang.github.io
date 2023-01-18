@@ -1,5 +1,6 @@
 import { AppShell, Group, Header, Navbar, Stack, Text } from "@mantine/core";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export interface IMainLayout {
   children: JSX.Element;
@@ -16,18 +17,18 @@ const MainLayout: React.FC<IMainLayout> = ({ children }) => {
               Kelurahan Banyorang
             </Text>
             <Group className="self-end mb-1">
-              <Text className="text-primary-text-500 text-xl tracking-[0.01em]">
+              <Link to={"/"} className="text-primary-text-500 text-xl tracking-[0.01em] cursor-pointer">
                 Beranda
-              </Text>
-              <Text className="text-primary-text-500 text-xl tracking-[0.01em]">
+              </Link>
+              <Link to={"/umkm"} className="text-primary-text-500 text-xl tracking-[0.01em] cursor-pointer">
                 UMKM
-              </Text>
-              <Text className="text-primary-text-500 text-xl tracking-[0.01em]">
+              </Link>
+              <Link to={"#"} className="text-primary-text-500 text-xl tracking-[0.01em] cursor-pointer">
                 Galeri
-              </Text>
-              <Text className="text-primary-text-500 text-xl tracking-[0.01em]">
+              </Link>
+              <Link to={"#"} className="text-primary-text-500 text-xl tracking-[0.01em] cursor-pointer">
                 Tentang
-              </Text>
+              </Link>
             </Group>
           </Group>
         </Stack>
