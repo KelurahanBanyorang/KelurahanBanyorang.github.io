@@ -10,16 +10,15 @@ import VerticalDivider from "../components/VerticalDivider";
 import { LocationIcon, QuotesIconOutline } from "../assets/icons/Fluent";
 import MonografiCircle from "../components/MonografiCircle";
 import MyModal from "../components/MyModal";
+import { ShowMap } from "../components/ShowMap";
 
 export interface IHome {}
 
 const Home: React.FC<IHome> = ({}) => {
   const [isMapDetailOpened, setIsMapDetailOpened] = useState(false);
-  const [isMoreDisplayed, setIsMoreDisplayed] = useState(false);
-  console.log(isMoreDisplayed);
   return (
     <MainLayout>
-      <Stack className="mb-10">
+      <Stack>
         <MyModal
           opened={isMapDetailOpened}
           setOpened={setIsMapDetailOpened}
@@ -75,7 +74,7 @@ const Home: React.FC<IHome> = ({}) => {
             </Text>
           </Stack>
         </Group>
-        <Stack className="mt-28 mx-[48px]">
+        <Stack className="mt-28 mx-[96px]">
           <Stack className="gap-0 border-l-[10px] pl-6 border-l-primaryBlue">
             <Text className="font-poppins-bold text-[46px] text-primary-text-500">
               Profil
@@ -85,15 +84,7 @@ const Home: React.FC<IHome> = ({}) => {
             </Text>
           </Stack>
           <div>
-            <div
-              className="flex items-center justify-center float-right ml-6 mb-6"
-              onMouseEnter={() => {
-                setIsMoreDisplayed(true);
-              }}
-              onMouseLeave={() => {
-                setIsMoreDisplayed(false);
-              }}
-            >
+            <div className="flex items-center justify-center float-right ml-6 mb-6">
               <Stack className="filter hover:brightness-50 relative gap-0">
                 <img
                   src={mapThumbnail}
@@ -193,14 +184,42 @@ const Home: React.FC<IHome> = ({}) => {
             />
             <MonografiCircle size="sm" text="5" description="RW" />
           </Group>
-          <Stack className="mx-[48px] mt-10">
-            <Group className="gap-2">
-              <LocationIcon size={72} color={"#1C82AD"} />
+          <Group className="mx-[48px] mt-10 self-center gap-10 relative">
+            <LocationIcon
+              size={120}
+              color={"#deddf1"}
+              className="absolute top-6 right-6"
+            />
+            <Stack>
               <Text className="font-poppins-semibold text-[32px] text-primary-text-500">
                 Lokasi
               </Text>
-            </Group>
-          </Stack>
+              <div className="p-4 bg-primaryGreen">
+                <img src={mapThumbnail} className={"w-96"} />
+              </div>
+            </Stack>
+            <Stack className="gap-2">
+              <Group className="gap-2">
+                <Stack className="gap-0">
+                  <Text className="font-poppins-semibold text-[32px] text-primary-text-500">
+                    Kelurahan Banyorang
+                  </Text>
+                  <Text className="text-[22px] font-poppins-semibold -mt-2 text-secondary-text-500">
+                    Di Peta (Google Maps)
+                  </Text>
+                </Stack>
+              </Group>
+              <VerticalDivider />
+              <Text className="w-[600px] text-primary-text-500 tracking-1 text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+                inventore incidunt, quaerat excepturi, nostrum deserunt sed sit
+                enim vero aut doloremque iste! Culpa, praesentium ad totam
+                distinctio numquam quidem modi? Quas tempora sequi facere amet?
+                Repellat cupiditate ullam molestiae magnam, id atque, eligendi
+                aperiam repudiandae aspernatur beatae ab reprehenderit enim?
+              </Text>
+            </Stack>
+          </Group>
         </Stack>
       </Stack>
     </MainLayout>

@@ -34,7 +34,7 @@ const MyModal = ({
         modal: {
           maxWidth: `${maxWidth}px`,
           width: "100%",
-          borderRadius: "12px",
+          borderRadius: "6px",
         },
         title: {
           fontSize: 24,
