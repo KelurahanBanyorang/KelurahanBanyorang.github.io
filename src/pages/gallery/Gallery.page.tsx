@@ -70,27 +70,35 @@ const MyGallery: React.FC<IMyGallery> = ({}) => {
             {/* <div className="absolute -top-16 -left-6 h-40 w-40 bg-primaryBlue -z-50"></div> */}
             <div className="absolute -bottom-6 -right-6 h-40 w-40 bg-primaryGreen -z-10"></div>
             <img src={galleryImages[selectedImageIdx].src} />
-            <Group className="absolute -bottom-8 left-6 mr-20 gap-8">
+            <Group className="absolute -bottom-7 left-6 mr-20 gap-8">
               <div
-                className={`flex flex-col justify-center cursor-pointer w-[72px] h-[72px] bg-white rounded-full p-3 shadow-[0_0_7px_2px_rgba(139,139,139,0.9)]`}
+                className={`flex flex-col justify-center cursor-pointer w-[56px] h-[56px] bg-white rounded-full p-3 shadow-[0_0_7px_2px_rgba(139,139,139,0.9)]`}
                 onClick={() => {
-                  setSelectedImageIdx(selectedImageIdx - 1);
+                  if (selectedImageIdx - 1 < 0) {
+                    setSelectedImageIdx(galleryImages.length - 1);
+                  } else {
+                    setSelectedImageIdx(selectedImageIdx - 1);
+                  }
                 }}
               >
                 <BackIconBold
-                  size={42}
+                  size={36}
                   color={"#03C988"}
                   className="self-center"
                 />
               </div>
               <div
-                className={`flex flex-col justify-center cursor-pointer w-[72px] h-[72px] bg-white rounded-full p-3 shadow-[0_0_7px_2px_rgba(139,139,139,0.9)]`}
+                className={`flex flex-col justify-center cursor-pointer w-[56px] h-[56px] bg-white rounded-full p-3 shadow-[0_0_7px_2px_rgba(139,139,139,0.9)]`}
                 onClick={() => {
-                  setSelectedImageIdx(selectedImageIdx + 1);
+                  if (selectedImageIdx + 1 >= galleryImages.length) {
+                    setSelectedImageIdx(0);
+                  } else {
+                    setSelectedImageIdx(selectedImageIdx + 1);
+                  }
                 }}
               >
                 <ForwardIconBold
-                  size={42}
+                  size={36}
                   color={"#03C988"}
                   className="self-center"
                 />

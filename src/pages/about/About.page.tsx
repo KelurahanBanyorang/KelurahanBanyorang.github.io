@@ -1,9 +1,10 @@
-import { Group, Stack, Text } from "@mantine/core";
+import { Group, Stack, Text, Tooltip } from "@mantine/core";
 import React from "react";
 import VerticalDivider from "../../components/VerticalDivider.component";
 import MainLayout from "../../layouts/MainLayout.layout";
 import fotoKKN from "../../assets/img/foto_kkn3.jpg";
 import logoKKN from "../../assets/img/logo-kknt.png";
+import { StaticTooltip } from "../../components/Tooltip.component";
 
 export interface IAbout {}
 
@@ -51,6 +52,10 @@ const About: React.FC<IAbout> = ({}) => {
           <img src={fotoKKN} />
           <div className="absolute -top-6 -right-6 h-40 w-40 bg-primaryBlue -z-10"></div>
           <div className="absolute -bottom-1 -left-6 h-40 w-40 bg-primaryBlue -z-10"></div>
+          <StaticTooltip label="Halo" position="top-end">
+            <div className="absolute top-[65px] right-[340px] w-12 h-12 bg-transparent" />
+          </StaticTooltip>
+
           <Text className="text-secondary-text-500 text-sm text-end">
             Gambar: Mahasiswa KKNT ITTG Unhas Gel. 109 Posko 2 Banyorang
           </Text>

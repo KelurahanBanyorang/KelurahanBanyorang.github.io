@@ -20,6 +20,7 @@ import FooterDescription from "../components/FooterDescription.component";
 import logoBantaeng from "../assets/img/logo-bantaeng.png";
 import logoKKN from "../assets/img/logo-kknt.png";
 import logoUnhas from "../assets/img/unhas_logo.png";
+import { FloatingTooltip } from "../components/Tooltip.component";
 
 export interface IMainLayout {
   children: JSX.Element;
@@ -71,15 +72,21 @@ const MainLayout: React.FC<IMainLayout> = ({ children }) => {
               KKN Unhas
             </Text> */}
             <Group>
-              <div className={`w-[72px]`}>
-                <img src={logoBantaeng} />
-              </div>
-              <div className={`w-[76px]`}>
-                <img src={logoKKN} />
-              </div>
-              <div className={`w-[68px]`}>
-                <img src={logoUnhas} />
-              </div>
+              <FloatingTooltip label="Logo Kabupaten Bantaeng">
+                <div className={`w-[72px]`}>
+                  <img src={logoBantaeng} />
+                </div>
+              </FloatingTooltip>
+              <FloatingTooltip label="Logo KKNT ITTG Unhas Gel. 109 Banyorang Posko 2"maxWidth={175}>
+                <div className={`w-[76px]`}>
+                  <img src={logoKKN} />
+                </div>
+              </FloatingTooltip>
+              <FloatingTooltip label="Logo Universitas Hasanuddin ">
+                <div className={`w-[68px]`}>
+                  <img src={logoUnhas} />
+                </div>
+              </FloatingTooltip>
             </Group>
             <Stack className="gap-0">
               <Text className="font-poppins-semibold text-[26px] text-white self-center">

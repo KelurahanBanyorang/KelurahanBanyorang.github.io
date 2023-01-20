@@ -143,7 +143,7 @@ const UmkmTable: React.FC<IUmkmTableProps> = ({
   return (
     <div className={`h-fit`}>
       <div className={`mt-4 ${headerType==="1"? "bg-gradient-to-r from-primaryBlue to-primaryGreen" : "bg-gradient-to-r from-primaryBlue to-primaryDarkerBlue"} w-full h-4 rounded-t-lg`}></div>
-      <div className="grow basis-0 block overflow-x-auto whitespace-nowrap border-2 border-t-0 rounded-b-md border-[#dfdfdf] overflow-y-auto">
+      <div className="grow basis-0 block overflow-x-auto whitespace-nowrap border-2 border-t-0 rounded-b-md border-[#dfdfdf] overflow-y-auto drop-shadow-1 shadow-lg">
         <Group
           p={"lg"}
           position="apart"
