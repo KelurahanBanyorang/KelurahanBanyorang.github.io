@@ -302,3 +302,51 @@ export function DownArrowNoTailOutlineBold({
     </svg>
   );
 }
+
+export function AddIconOutline({
+  size = 24,
+  color = 'black',
+  onClick,
+  className
+}: IFluentProps) {
+  return (
+    <svg
+      width={size+`px`}
+      height={size+`px`}
+      viewBox={`0 0 48 48`}
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      onClick={onClick}
+      className={className}
+    >
+      <path
+      d='M22.85 37.5V25.15H10.5v-2.3h12.35V10.5h2.3v12.35H37.5v2.3H25.15V37.5Z'
+      fill={color}
+      />
+    </svg>
+  );
+}
+
+export function MinusIconOutline({
+  size = 24,
+  color = 'black',
+  onClick,
+  className
+}: IFluentProps) {
+  return (
+    <svg
+      width={size+`px`}
+      height={size+`px`}
+      viewBox={`0 0 48 48`}
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      onClick={onClick}
+      className={className}
+    >
+      <path
+      d='M10.5 25.15v-2.3h27v2.3Z'
+      fill={color}
+      />
+    </svg>
+  );
+}

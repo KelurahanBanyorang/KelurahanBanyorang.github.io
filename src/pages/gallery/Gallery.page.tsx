@@ -6,11 +6,10 @@ import {
   DownArrowNoTailOutlineBold,
   ForwardIconBold,
   UpArrowNoTailOutlineBold
-} from "../assets/icons/Fluent";
-import camera from "../assets/img/camera.jpg";
-import CircleLogo from "../components/CircleLogo";
-import VerticalDivider from "../components/VerticalDivider";
-import MainLayout from "../layouts/MainLayout";
+} from "../../assets/icons/Fluent";
+import VerticalDivider from "../../components/VerticalDivider.component";
+import MainLayout from "../../layouts/MainLayout.layout";
+import camera from "../../assets/img/camera.jpg";
 import { images } from "./Gallery.const";
 
 export interface IMyGallery {}

@@ -1,20 +1,12 @@
 import {
-  Table,
-  Group,
-  Stack,
-  Button,
-  Title,
-  MediaQuery,
-  Pagination,
-  Text,
-  Loader,
-  Collapse
+  Collapse, Group, Loader, MediaQuery,
+  Pagination, Stack, Table, Text
 } from "@mantine/core";
 import React, { useState } from "react";
 import {
   DownArrowNoTailOutline,
   UpArrowNoTailOutline
-} from "../assets/icons/Fluent";
+} from "../../assets/icons/Fluent";
 
 type TableRowCellKey = string;
 interface IUmkmTableProps {

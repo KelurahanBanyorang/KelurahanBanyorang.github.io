@@ -40,6 +40,7 @@ const MyModal = ({
           fontSize: 24,
           color: "#334155",
           fontWeight: 700,
+          fontFamily: "Poppins"
         },
       }}
     >

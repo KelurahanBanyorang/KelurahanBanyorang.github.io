@@ -1,9 +1,8 @@
 import { Button, Group, Stack, Text } from "@mantine/core";
 import React from "react";
-import CircleLogo from "./CircleLogo";
-import logoBantaeng from "../assets/img/logo-bantaeng.png";
-import logoKKN from "../assets/img/logo-kknt.png";
-
+import CircleLogo from "../../components/CircleLogo.component";
+import logoBantaeng from "../../assets/img/logo-bantaeng.png";
+import logoKKN from "../../assets/img/logo-kknt.png";
 
 export interface IJumbotron {}
 
@@ -31,6 +30,9 @@ const Jumbotron: React.FC<IJumbotron> = ({}) => {
           <Button
             variant="light"
             className="bg-transparent hover:bg-transparent text-white text-lg w-fit h-10 border border-white px-3 py-2 self-end mt-2"
+            onClick={()=>{
+              window.scrollTo(0, 1190);
+            }}
           >
             Selengkapnya
           </Button>

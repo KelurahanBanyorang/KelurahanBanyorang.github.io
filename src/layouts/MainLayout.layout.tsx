@@ -16,7 +16,7 @@ import {
   InstagramIcon,
   LocationIcon
 } from "../assets/icons/Fluent";
-import FooterDescription from "../components/FooterDescription";
+import FooterDescription from "../components/FooterDescription.component";
 import logoBantaeng from "../assets/img/logo-bantaeng.png";
 import logoKKN from "../assets/img/logo-kknt.png";
 import logoUnhas from "../assets/img/unhas_logo.png";
@@ -85,28 +85,37 @@ const MainLayout: React.FC<IMainLayout> = ({ children }) => {
               <Text className="font-poppins-semibold text-[26px] text-white self-center">
                 Kelurahan Banyorang
               </Text>
-              <Text className="text-white -mt-1">Kec. Tompobulu, Kab. Bantaeng, Sulawesi Selatan</Text>
+              <Text className="text-white -mt-1">
+                Kec. Tompobulu, Kab. Bantaeng, Sulawesi Selatan
+              </Text>
             </Stack>
-            <Group className="gap-6">
+            <Group className="gap-4">
               <a
                 href="https://web.facebook.com/kitabanyorang/?_rdc=1&_rdr"
                 target={"_blank"}
+                className="p-[6px] rounded-full hover:bg-primaryGreen transition-all"
               >
                 <FacebookIcon color="#FFFFFF" size={32} />
               </a>
               <a
                 href="https://www.instagram.com/kknt109_banyorang/"
                 target={"_blank"}
+                className="p-2 rounded-full hover:bg-primaryGreen transition-all"
               >
-                <InstagramIcon color="#FFFFFF" size={30} />
+                <InstagramIcon color="#FFFFFF" size={28} />
               </a>
               <a
                 href="https://www.google.com/maps/place/Banyorang,+Tompobulu,+Bantaeng+Regency,+South+Sulawesi/@-5.4628325,120.0316885,14z/data=!3m1!4b1!4m5!3m4!1s0x2dbeae8d7db5888b:0x6fad451a5622546f!8m2!3d-5.4630263!4d120.0347441"
                 target={"_blank"}
+                className="p-1 rounded-full hover:bg-primaryGreen transition-all"
               >
                 <LocationIcon color="#FFFFFF" size={34} />
               </a>
-              <a href="https://github.com/KelurahanBanyorang" target={"_blank"}>
+              <a
+                href="https://github.com/KelurahanBanyorang"
+                target={"_blank"}
+                className="p-[6px] rounded-full hover:bg-primaryGreen transition-all"
+              >
                 <GithubIcon color="#FFFFFF" size={32} />
               </a>
             </Group>

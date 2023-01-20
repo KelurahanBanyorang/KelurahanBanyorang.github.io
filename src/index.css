@@ -4,29 +4,29 @@
 
 @font-face {
   font-family: "poppins";
-  src: url("./fonts/Poppins-Medium.ttf");
+  src: url("./fonts/Poppins/Poppins-Medium.ttf");
 }
 
 
 @font-face {
   font-family: "poppins-bold";
-  src: url("./fonts/Poppins-Bold.ttf");
+  src: url("./fonts/Poppins/Poppins-Bold.ttf");
 }
 
 
 @font-face {
   font-family: "poppins-semibold";
-  src: url("./fonts/Poppins-SemiBold.ttf");
+  src: url("./fonts/Poppins/Poppins-SemiBold.ttf");
 }
 
 @font-face {
   font-family: "poppins-light";
-  src: url("./fonts/Poppins-Light.ttf");
+  src: url("./fonts/Poppins/Poppins-Light.ttf");
 }
 
 * {
   box-sizing: border-box !important;
-  transition: ease all 0.5s;
+  /* transition: ease all 0.5s; */
 }
 
 html {

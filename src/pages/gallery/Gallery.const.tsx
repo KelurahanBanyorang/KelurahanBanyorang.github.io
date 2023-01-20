@@ -1,5 +1,5 @@
-import fotoKKN from "../assets/img/foto_kkn3.jpg";
-import umkm from "../assets/img/umkm.jpg";
+import fotoKKN from "../../assets/img/foto_kkn3.jpg";
+import umkm from "../../assets/img/umkm.jpg";
 
 export const images = [
   {

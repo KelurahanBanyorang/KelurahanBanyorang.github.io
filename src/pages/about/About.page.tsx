@@ -1,10 +1,9 @@
 import { Group, Stack, Text } from "@mantine/core";
-import React, { useEffect } from "react";
-import MainLayout from "../layouts/MainLayout";
-import fotoKKN from "../assets/img/foto_kkn3.jpg";
-import VerticalDivider from "../components/VerticalDivider";
-import { SearchIconOutline } from "../assets/icons/Fluent";
-import logoKKN from "../assets/img/logo-kknt.png";
+import React from "react";
+import VerticalDivider from "../../components/VerticalDivider.component";
+import MainLayout from "../../layouts/MainLayout.layout";
+import fotoKKN from "../../assets/img/foto_kkn3.jpg";
+import logoKKN from "../../assets/img/logo-kknt.png";
 
 export interface IAbout {}
 

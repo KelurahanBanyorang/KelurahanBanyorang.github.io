@@ -1,11 +1,10 @@
-import { Button, Stack, Text } from "@mantine/core";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import "./fonts/Poppins-Medium.ttf";
-import About from "./pages/About";
-import Gallery from "./pages/Gallery";
-import Home from "./pages/Home";
-import Umkm from "./pages/Umkm";
+import "./fonts/Poppins/Poppins-Medium.ttf";
+import About from "./pages/about/About.page";
+import Gallery from "./pages/gallery/Gallery.page";
+import Home from "./pages/home/Home.page";
+import Umkm from "./pages/umkm/Umkm.page";
 
 function App() {
   return (

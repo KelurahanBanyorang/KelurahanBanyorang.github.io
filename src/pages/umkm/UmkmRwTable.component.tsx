@@ -1,11 +1,9 @@
-import { Stack, Text } from "@mantine/core";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import useArray from "../../hooks/useArray";
 import FETableComponent, {
-  IFETableAction,
   IFETableHeadingProps,
   IFETableRowColumnProps
-} from "./UmkmTable";
-import useArray from "../assets/hooks/useArray";
+} from "./UmkmTable.component";
 // import {readFile, utils} from "xlsx";
 
 export interface IUmkmRwTable {
