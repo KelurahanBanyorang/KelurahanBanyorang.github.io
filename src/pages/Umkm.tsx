@@ -1,6 +1,7 @@
 import { Group, Stack, Text } from "@mantine/core";
 import React from "react";
 import UmkmRwTable from "../components/UmkmRwTable";
+import VerticalDivider from "../components/VerticalDivider";
 import MainLayout from "../layouts/MainLayout";
 
 export interface IUmkm {}
@@ -8,15 +9,44 @@ export interface IUmkm {}
 const Umkm: React.FC<IUmkm> = ({}) => {
   return (
     <MainLayout>
-      <Stack className="mb-10">
-        <Group className="border-l-[10px] pl-6 border-primaryBlue mx-24 gap-2 mt-10 mb-4">
-          <Text className="self-end font-poppins-semibold text-[48px] text-primary-text-500">
-            Data UMKM
-          </Text>
-          <Text className="self-end mb-3 font-poppins-semibold text-[24px] text-secondary-text-500 -mt-2">
-            Kelurahan Banyorang
-          </Text>
-        </Group>
+      <Stack>
+        <div className="mt-10 mb-4 mx-24 bg-umkm bg-cover h-[300px]">
+          <Stack className="gap-0 bg-gradient-to-r from-white via-white to-transparent h-full w-full">
+            <Stack className="gap-0">
+              <Text className="font-poppins-semibold text-[48px] text-primary-text-500">
+                Data UMKM
+              </Text>
+              <Text className="mb-3 font-poppins-semibold text-[24px] text-secondary-text-500 -mt-2">
+                Kelurahan Banyorang
+              </Text>
+            </Stack>
+            <VerticalDivider h="sm" />
+            <Text className="text-lg text-primary-text-500 text-justify w-[50%] mt-4">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, soluta.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+              quaerat odit provident cum architecto assumenda tenetur
+              perspiciatis repudiandae sequi distinctio quae vitae quibusdam
+              nostrum.
+            </Text>
+          </Stack>
+        </div>
+        {/* <div className="mt-10 mb-4 mx-24 bg-umkm2 bg-cover h-[400px] flex flex-col justify-center">
+          <Stack className="gap-0 border-[8px] w-[50%] border-white ml-6 p-4 bg-black/[0.3] rounded-sm">
+            <Group className="gap-2">
+              <Text className="self-end font-poppins-semibold text-[48px] text-white">
+                Data UMKM
+              </Text>
+              <Text className="self-end mb-3 font-poppins-semibold text-[24px] text-white -mt-6">
+                Kelurahan Banyorang
+              </Text>
+            </Group>
+            <Text className="text-lg text-white text-justify mt-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+              quaerat odit provident cum architecto assumenda tenetur
+              perspiciatis repudiandae sequi distinctio quae vitae quibusdam
+            </Text>
+          </Stack>
+        </div> */}
         <Stack className="mx-24 gap-4">
           <UmkmRwTable title="Daftar UMKM RW 1" />
           <UmkmRwTable title="Daftar UMKM RW 2" tableHeaderTitle="2" />

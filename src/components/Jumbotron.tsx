@@ -22,7 +22,7 @@ const Jumbotron: React.FC<IJumbotron> = ({}) => {
               Selamat Datang,
             </Text>
             <Text className="font-poppins-semibold text-[38px] text-white -mt-2">
-              Di Website Promosi
+              Di Website Profil
             </Text>
             <Text className="font-poppins-semibold text-[38px] text-white -mt-4">
               Kelurahan Banyorang
@@ -37,7 +37,7 @@ const Jumbotron: React.FC<IJumbotron> = ({}) => {
         </Stack>
         <Group className="absolute -bottom-10 right-0 mr-20 gap-8">
           <CircleLogo src={logoBantaeng} />
-          <CircleLogo src={logoBantaeng} />
+          {/* <CircleLogo src={logoBantaeng} /> */}
           <CircleLogo src={logoKKN} p="p-[10px]" />
         </Group>
       </Stack>

@@ -1,11 +1,12 @@
 import React from 'react';
 
-export interface IVerticalDivider {}
+export interface IVerticalDivider {
+  h?: "sm" | "md" | "lg"
+}
 
-const VerticalDivider: React.FC<IVerticalDivider> = ({ }) => {
+const VerticalDivider: React.FC<IVerticalDivider> = ({ h="md" }) => {
   return (
-    <div className='bg-secondary-500 w-[3px] h-16'>
-
+    <div className={`bg-secondary-500 w-[3px] ${h=="md"? "h-16" : (h=="sm"? "h-10" : "h-[200px]")}`}>
     </div>
   )
 }

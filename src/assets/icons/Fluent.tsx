@@ -182,3 +182,123 @@ export function FacebookIcon({
     </svg>
   );
 }
+
+export function SearchIconOutline({
+  size = 24,
+  color = "black",
+  onClick,
+  className
+}: IFluentProps) {
+  return (
+    <svg
+      width={size + `px`}
+      height={size + `px`}
+      viewBox={`0 0 48 48`}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      onClick={onClick}
+      className={className}
+    >
+      <path
+        d="M39.8 41.95 26.65 28.8q-1.5 1.3-3.5 2.025-2 .725-4.25.725-5.4 0-9.15-3.75T6 18.75q0-5.3 3.75-9.05 3.75-3.75 9.1-3.75 5.3 0 9.025 3.75 3.725 3.75 3.725 9.05 0 2.15-.7 4.15-.7 2-2.1 3.75L42 39.75Zm-20.95-13.4q4.05 0 6.9-2.875Q28.6 22.8 28.6 18.75t-2.85-6.925Q22.9 8.95 18.85 8.95q-4.1 0-6.975 2.875T9 18.75q0 4.05 2.875 6.925t6.975 2.875Z"
+        fill={color}
+      />
+    </svg>
+  );
+}
+
+export function ForwardIconBold({
+  size = 24,
+  color = 'black',
+  onClick,
+  className
+}: IFluentProps) {
+  return (
+    <svg
+      width={size+`px`}
+      height={size+`px`}
+      viewBox={`0 0 48 48`}
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      onClick={onClick}
+      className={className}
+    >
+      <path
+      d='m24 40.55-3.35-3.4 10.85-10.8H7.45v-4.7H31.5L20.65 10.8 24 7.45 40.55 24Z'
+      fill={color}
+      />
+    </svg>
+  );
+}
+
+export function BackIconBold({
+  size = 24,
+  color = 'black',
+  onClick,
+  className
+}: IFluentProps) {
+  return (
+    <svg
+      width={size+`px`}
+      height={size+`px`}
+      viewBox={`0 0 48 48`}
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      onClick={onClick}
+      className={className}
+    >
+      <path
+      d='M24 40.55 7.45 24 24 7.45l3.35 3.3-10.85 10.9h24.05v4.7H16.5L27.35 37.2Z'
+      fill={color}
+      />
+    </svg>
+  );
+}
+
+export function UpArrowNoTailOutlineBold({
+  size = 24,
+  color = 'black',
+  onClick,
+  className
+}: IFluentProps) {
+  return (
+    <svg
+      width={size+`px`}
+      height={size+`px`}
+      viewBox={`0 0 48 48`}
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      onClick={onClick}
+      className={className}
+    >
+      <path
+      d='m14.15 31.9-3.35-3.35L24 15.35 37.2 28.5l-3.35 3.35L24 22Z'
+      fill={color}
+      />
+    </svg>
+  );
+}
+
+export function DownArrowNoTailOutlineBold({
+  size = 24,
+  color = 'black',
+  onClick,
+  className
+}: IFluentProps) {
+  return (
+    <svg
+      width={size+`px`}
+      height={size+`px`}
+      viewBox={`0 0 48 48`}
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      onClick={onClick}
+      className={className}
+    >
+      <path
+      d='M24 31.9 10.8 18.7l3.35-3.35 9.85 9.9 9.85-9.85 3.35 3.35Z'
+      fill={color}
+      />
+    </svg>
+  );
+}

@@ -19,6 +19,7 @@ import {
 import FooterDescription from "../components/FooterDescription";
 import logoBantaeng from "../assets/img/logo-bantaeng.png";
 import logoKKN from "../assets/img/logo-kknt.png";
+import logoUnhas from "../assets/img/unhas_logo.png";
 
 export interface IMainLayout {
   children: JSX.Element;
@@ -32,7 +33,7 @@ const MainLayout: React.FC<IMainLayout> = ({ children }) => {
         <Stack p="xs" className="items-center flex flex-row pr-6 pt-4">
           <Group className="w-full justify-between">
             <Text className="text-primary-text-500 text-[30px] font-poppins-semibold ml-4">
-              Kelurahan Banyorang
+              Banyorang
             </Text>
             <Group className="self-end">
               <Link
@@ -48,13 +49,13 @@ const MainLayout: React.FC<IMainLayout> = ({ children }) => {
                 UMKM
               </Link>
               <Link
-                to={"#"}
+                to={"/galeri"}
                 className="text-primary-text-500 text-xl tracking-[0.01em] cursor-pointer"
               >
                 Galeri
               </Link>
               <Link
-                to={"#"}
+                to={"/tentang"}
                 className="text-primary-text-500 text-xl tracking-[0.01em] cursor-pointer"
               >
                 Tentang
@@ -73,13 +74,19 @@ const MainLayout: React.FC<IMainLayout> = ({ children }) => {
               <div className={`w-[72px]`}>
                 <img src={logoBantaeng} />
               </div>
-              <div className={`w-[72px]`}>
+              <div className={`w-[76px]`}>
                 <img src={logoKKN} />
               </div>
+              <div className={`w-[68px]`}>
+                <img src={logoUnhas} />
+              </div>
             </Group>
-            <Text className="font-poppins-semibold text-[26px] text-white self-center">
-              Kelurahan Banyorang
-            </Text>
+            <Stack className="gap-0">
+              <Text className="font-poppins-semibold text-[26px] text-white self-center">
+                Kelurahan Banyorang
+              </Text>
+              <Text className="text-white -mt-1">Kec. Tompobulu, Kab. Bantaeng, Sulawesi Selatan</Text>
+            </Stack>
             <Group className="gap-6">
               <a
                 href="https://web.facebook.com/kitabanyorang/?_rdc=1&_rdr"
@@ -110,7 +117,10 @@ const MainLayout: React.FC<IMainLayout> = ({ children }) => {
                 title="Tentang"
                 description="Website ini dibuat oleh Mahasiswa KKNT Inovasi Teknologi Tepat Guna Universitas Hasanuddin Gelombang 109 Posko 2 Kelurahan Banyorang pada Januari 2023."
               />
-              <Link to={"/tentang"} className="text-primaryBlue-300 text-lg tracking-4">
+              <Link
+                to={"/tentang"}
+                className="text-primaryBlue-300 text-lg tracking-4"
+              >
                 Selengkapnya
               </Link>
             </Grid.Col>

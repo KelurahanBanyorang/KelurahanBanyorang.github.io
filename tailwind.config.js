@@ -154,6 +154,9 @@ module.exports = {
     extend: {
       backgroundImage: {
         'jumbotron': "url('../src/assets/img/jumbotron.jpg')",
+        'umkm': "url('../src/assets/img/umkm.jpg')",
+        'umkm2': "url('../src/assets/img/umkm2.jpg')",
+        'galeri': "url('../src/assets/img/galeri.jpg')",
       },
     }
   },
