@@ -148,7 +148,7 @@ const UmkmTable: React.FC<IUmkmTableProps> = ({
           p={"lg"}
           position="apart"
           onClick={() => setIsOpened(!isOpened)}
-          className="cursor-pointer"
+          className="cursor-pointer my-2"
         >
           {/* {headerType === "2" ? (
             <div className="mr-4">
@@ -159,15 +159,15 @@ const UmkmTable: React.FC<IUmkmTableProps> = ({
               )}
             </div>
           ) : null} */}
-          <Group className="gap-2">
+          <Group className="gap-4">
             {!!tableTitle && (
               <Text className="text-primary-text-500 text-xl font-poppins-semibold">
                 {tableTitle}
               </Text>
             )}
             {onProgressData > 0 ? (
-              <div className="w-[22px] h-[22px] pt-[2px] text-center rounded-full bg-primaryDarkerBlue text-white text-sm relative -top-1">
-                {onProgressData > 9 ? "9+" : onProgressData}
+              <div className="w-[24px] h-[24px] pt-[2px] text-center rounded-full bg-primaryDarkerBlue text-white text-sm relative -top-1">
+                {onProgressData}
               </div>
             ) : null}
           </Group>
@@ -248,7 +248,7 @@ const UmkmTable: React.FC<IUmkmTableProps> = ({
                   {isEmpty ? (
                     <tr className={`h-40`}>
                       <td colSpan={tableHeadings.length + 1}>
-                        <Text weight={"bold"} size="lg" align="center">
+                        <Text weight={"semibold"} size="lg" align="center">
                           {noDataMsg}
                         </Text>
                       </td>

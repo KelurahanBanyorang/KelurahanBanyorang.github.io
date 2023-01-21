@@ -22,7 +22,6 @@ const MyGallery: React.FC<IMyGallery> = ({}) => {
 
   function onClickGallery(idx: number) {
     setSelectedImageIdx(idx);
-    // console.log(idx);
     setIsGalleryModalOpened(true);
   }
   return (
@@ -33,7 +32,13 @@ const MyGallery: React.FC<IMyGallery> = ({}) => {
           onClose={() => {
             setIsGalleryModalOpened(false);
           }}
-          title={galleryImages[selectedImageIdx].alt || "Foto"}
+          title={
+            <Group className="gap-2">
+              {/* <Text className="bg-primaryBlue font-poppins text-white px-1 py-[1px]">{selectedImageIdx + 1}.</Text> */}
+              <Text className="font-poppins text-primary-text-500 px-1 py-[1px]">{selectedImageIdx + 1}.</Text>
+              {galleryImages[selectedImageIdx].alt || "Gallery Foto"}
+            </Group>
+          }
           centered
           padding={0}
           styles={{
@@ -52,7 +57,8 @@ const MyGallery: React.FC<IMyGallery> = ({}) => {
               marginTop: "16px",
               marginBottom: "12px",
               marginLeft: "20px",
-              zIndex: 10
+              zIndex: 10,
+              fontFamily: "Poppins"
             },
             close: {
               // display: "none"
@@ -156,20 +162,20 @@ const MyGallery: React.FC<IMyGallery> = ({}) => {
               <div className="bg-gradient-to-b from-transparent to-black w-[94%] px h-20"></div>
             </div> */}
             <div
-              className="bg-primaryGreen w-full h-6 mt-2 rounded-b-full flex justify-center cursor-pointer"
+              className="bg-primaryGreen w-full h-5 mt-1 rounded-b-full flex justify-center cursor-pointer"
               onClick={() => setIsGalleryExpanded(!isGalleryExpanded)}
             >
               {isGalleryExpanded ? (
                 <UpArrowNoTailOutlineBold
                   size={24}
                   color={"#FFFFFF"}
-                  className="mt-[1px]"
+                  className="-mt-[1px]"
                 />
               ) : (
                 <DownArrowNoTailOutlineBold
                   size={24}
                   color={"#FFFFFF"}
-                  className=""
+                  className="-mt-[1px]"
                 />
               )}
             </div>

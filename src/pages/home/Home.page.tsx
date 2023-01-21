@@ -17,7 +17,7 @@ const Home: React.FC<IHome> = ({}) => {
         <Speech />
         <Profile />
         <Monograph />
-        <Location />
+        {/* <Location /> */}
       </Stack>
     </MainLayout>
   );

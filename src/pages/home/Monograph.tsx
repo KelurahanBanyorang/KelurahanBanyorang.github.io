@@ -101,6 +101,17 @@ const Monograph: React.FC<IMonograph> = ({}) => {
               </Stack>
             </Group>
           </Stack>
+          <Text className="self-end mt-4 text-md text-secondary-text-500">
+            Sumber :{" "}
+            <a
+              href="https://www.big.go.id/"
+              target={"_blank"}
+              className="text-primaryBlue"
+            >
+              BIG (Badan Informasi Geospasial)
+            </a>{" "}
+            per tanggal 30 Juni 2019
+          </Text>
         </Stack>
       </MyModal>
       <Text className="font-poppins-bold text-[46px] text-primary-text-500 text-center">

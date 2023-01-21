@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import useArray from "../../hooks/useArray";
 import FETableComponent, {
   IFETableHeadingProps,
@@ -9,6 +9,7 @@ import FETableComponent, {
 export interface IUmkmRwTable {
   title?: string;
   tableHeaderTitle?: "1" | "2";
+  rw?: string | number;
 }
 
 function getDataFromBackend() {
@@ -65,11 +66,53 @@ function getDataFromBackend() {
 
 const UmkmRwTable: React.FC<IUmkmRwTable> = ({
   title,
-  tableHeaderTitle = "1"
+  tableHeaderTitle = "1",
+  rw = 1
 }) => {
-  const { array: dataFromBackend } = useArray(getDataFromBackend());
+  // const { array: dataFromBackend } = useArray(getDataFromBackend());
   const [activePage, setActivePage] = useState<number>(1);
+  const [firstRender, setFirstRender] = useState(true);
   const [selectedRow, setSelectedRow] = useState(0);
+
+  const { array: umkmData, push, clear } = useArray([]);
+
+  useEffect(() => {
+    if (firstRender) {
+      setFirstRender(false);
+      let SHEET_ID = "1hMhkNeM5eycAMisNn1nTDxa5VwGfOvid";
+      let SHEET_TITLE = `RW ${rw}`;
+
+      let FULL_URL =
+        "https://docs.google.com/spreadsheets/d/" +
+        SHEET_ID +
+        "/gviz/tq?sheet=" +
+        SHEET_TITLE;
+
+      // if (umkmData.length <= 0) {
+      fetch(FULL_URL)
+        .then((res) => res.text())
+        .then((rep) => {
+          let data = JSON.parse(rep.substring(47).slice(0, -2));
+          clear();
+          for (let i = 0; i < data.table.rows.length; i++) {
+            let element = data.table.rows[i];
+            push({
+              id: `RW ${rw} ${i}`,
+              businessMen:
+                element.c[1] == null ? "Tidak ada" : element.c[1].v.trim(),
+              businessType:
+                element.c[2] == null ? "Tidak ada" : element.c[2].v.trim(),
+              sdm: element.c[3] == null ? "Tidak ada" : element.c[3].v.trim(),
+              partners:
+                element.c[4] == null ? "Tidak ada" : element.c[4].v.trim(),
+              businessAge:
+                element.c[5] == null ? "Tidak ada" : element.c[5].v.trim(),
+              rw: element.c[7] == null ? "Tidak ada" : element.c[7].v.trim()
+            });
+          }
+        });
+    }
+  }, []);
 
   const tableHeadings: IFETableHeadingProps[] = [
     {
@@ -118,7 +161,7 @@ const UmkmRwTable: React.FC<IUmkmRwTable> = ({
     }
   ];
 
-  const tableRows = dataFromBackend.map(
+  const tableRows = umkmData.map(
     (data: any, idx: number) =>
       ({
         no: {
@@ -144,23 +187,20 @@ const UmkmRwTable: React.FC<IUmkmRwTable> = ({
         }
       } as IFETableRowColumnProps)
   );
+
   return (
     <FETableComponent
       isLoading={false}
       // dataAmt={dataFromBackend.length}
       headerType={tableHeaderTitle}
-      dataPerPageAmt={5}
-      onSearch={(value) => {
-        console.log("Searching for: ", value);
-      }}
+      dataPerPageAmt={6}
       onPageChange={setActivePage}
       activePage={activePage}
       tableTitle={title || "Daftar UMKM"}
       tableRows={tableRows}
       tableHeadings={tableHeadings}
       noDataMsg={"Data tidak ditemukan"}
-      actionColumnWidth="270px"
-      onProgressData={dataFromBackend.length}
+      onProgressData={umkmData.length}
     />
   );
 };
