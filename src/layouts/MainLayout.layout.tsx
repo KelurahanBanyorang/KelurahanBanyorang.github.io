@@ -77,7 +77,10 @@ const MainLayout: React.FC<IMainLayout> = ({ children }) => {
                   <img src={logoBantaeng} />
                 </div>
               </FloatingTooltip>
-              <FloatingTooltip label="Logo KKNT ITTG Unhas Gel. 109 Banyorang Posko 2"maxWidth={175}>
+              <FloatingTooltip
+                label="Logo KKNT ITTG Unhas Gel. 109 Banyorang Posko 2"
+                maxWidth={175}
+              >
                 <div className={`w-[76px]`}>
                   <img src={logoKKN} />
                 </div>
@@ -127,10 +130,16 @@ const MainLayout: React.FC<IMainLayout> = ({ children }) => {
               </a>
             </Group>
           </Group>
-          <Grid gutter={"xl"} className="mb-4">
-            <Grid.Col span={3}>
+          <Grid gutter={50} className="mb-4 mx-8">
+            <Grid.Col span={4}>
               <FooterDescription
-                title="Tentang"
+                title="Website Profil Kelurahan"
+                description="Website profil kelurahan merupakan situs web yang memuat informasi dasar mengenai kelurahan, sejarah, visi dan misi kelurahan, sampai dengan peta wilayah kelurahan."
+              />
+            </Grid.Col>
+            <Grid.Col span={4}>
+              <FooterDescription
+                title="Developer"
                 description="Website ini dibuat oleh Mahasiswa KKNT Inovasi Teknologi Tepat Guna Universitas Hasanuddin Gelombang 109 Posko 2 Kelurahan Banyorang pada Januari 2023."
               />
               <Link
@@ -140,14 +149,11 @@ const MainLayout: React.FC<IMainLayout> = ({ children }) => {
                 Selengkapnya
               </Link>
             </Grid.Col>
-            <Grid.Col span={3}>
-              <FooterDescription />
-            </Grid.Col>
-            <Grid.Col span={3}>
-              <FooterDescription />
-            </Grid.Col>
-            <Grid.Col span={3}>
-              <FooterDescription />
+            <Grid.Col span={4}>
+              <FooterDescription
+                title="Harapan & Tujuan"
+                description="Situs web profil ini dibuat untuk tujuan promosi dan publisitas kelurahan Banyorang agar lebih dikenal oleh khalayak ramai baik di dalam maupun di luar kelurahan Banyorang."
+              />
             </Grid.Col>
           </Grid>
           <Divider className="w-[60%] self-center" />

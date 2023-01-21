@@ -26,7 +26,7 @@ const About: React.FC<IAbout> = ({}) => {
           </Stack>
           <Group className="relative gap-16 mb-4">
             <Text className="text-lg text-primary-text-500 text-justify w-[60%] mt-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+              {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
               quaerat odit provident cum architecto assumenda tenetur
               perspiciatis repudiandae sequi distinctio quae vitae quibusdam
               minima vel sit impedit temporibus, delectus ipsam. Nobis, a enim
@@ -40,7 +40,17 @@ const About: React.FC<IAbout> = ({}) => {
               Recusandae autem cumque debitis molestiae! Lorem ipsum dolor sit
               amet, consectetur adipisicing elit. Quas illo natus consequuntur
               nam est tempore nobis sapiente laboriosam cumque fugiat laborum
-              illum id officiis amet quo similique nesciunt, sed quia.
+              illum id officiis amet quo similique nesciunt, sed quia. */}
+              Kuliah Kerja Nyata (KKN) Universitas Hasanuddin gelombang 109
+              dengan tema Inovasi Teknologi Tepat Guna beranggotakan 10 orang
+              dengan koordinator posko Jailani Ahmad mahasiswa teknik mesin
+              angkatan 2019. lokasi posko terletak di Kelurahan Banyorang
+              Kecamatan Tompobulu Kabupaten Bantaeng. kegiatan kegiatan yang
+              dilakukan adalah pengadaan peta kelurahan, pembuatan website
+              promosi kelurahan, kerja bakti dengan masyarakat setiap hari
+              kamis, penyuluhan pengenalan bahan alam untuk pembuatan pupuk
+              organik, perancangan mesin penyortir biji kopi, perancangan mesin
+              pengering hasil pertanian dan banyak lainnya.
             </Text>
 
             <VerticalDivider h="lg" />

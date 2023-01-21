@@ -1,6 +1,7 @@
 import { Stack } from "@mantine/core";
 import React from "react";
 import MainLayout from "../../layouts/MainLayout.layout";
+import Explore from "./Explore.section";
 import Jumbotron from "./Jumbotron.section";
 import Location from "./Location.section";
 import Monograph from "./Monograph";
@@ -17,6 +18,7 @@ const Home: React.FC<IHome> = ({}) => {
         <Speech />
         <Profile />
         <Monograph />
+        <Explore />
         {/* <Location /> */}
       </Stack>
     </MainLayout>

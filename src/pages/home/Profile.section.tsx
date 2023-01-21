@@ -57,7 +57,7 @@ const Profile: React.FC<IProfile> = ({}) => {
           </div>
 
           <Text className="text-lg text-primary-text-500 text-justify">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+            {/* Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem
             nesciunt et fugit soluta pariatur! Natus at iusto neque magni
             reprehenderit veniam hic. Error, perferendis dolores sunt aliquam
             veniam labore eligendi accusantium iure cupiditate illum sit modi
@@ -97,7 +97,17 @@ const Profile: React.FC<IProfile> = ({}) => {
             Placeat, quidem animi, dolorum tempora consequatur officia ut
             cupiditate doloremque minima modi odit sint, omnis officiis
             accusantium mollitia nam unde! Non totam nemo illo distinctio nihil
-            nisi perferendis corrupti.
+            nisi perferendis corrupti. */}
+            Kelurahan Banyorang merupakan salah satu kelurahan yang ada di
+            Kecamatan Tompobulu Kabupaten Bantaeng Provinsi Sulawesi Selatan.
+            Adalah kelurahan yang menjadi pusat dari Kecamatan Tompobulu,
+            terdapat kantor kecamatan, polsek, kantor urusan agama, serta Rumah
+            Sakit Umum, dan banyak UMKM yang terdapat di Kelurahan Banyorang
+            salah satunya ialah Sentra Kopi. Kelurahan Banyorang sendiri
+            memiliki 5 Rukun Warga dan 15 Rukun Tetangga. untuk nama dari
+            Kelurahan Banyorang berasal dari kata "banyak orang", nama ini
+            diambil karena di Kelurahan Banyorang merupakan kelurahan dengan
+            jumlah penduduk yang banyak serta datang dari berbagai daerah.
           </Text>
         </div>
       </Stack>

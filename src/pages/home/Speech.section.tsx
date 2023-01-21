@@ -38,7 +38,7 @@ const Speech: React.FC<ISpeech> = ({}) => {
         </Stack>
         <VerticalDivider />
         <Text className="w-[600px] text-primary-text-500 tracking-1 text-justify">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga nemo
+          {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga nemo
           minima deserunt ullam at ipsam animi voluptas officia numquam
           consequatur ad hic, reiciendis enim quo nesciunt atque nam unde
           incidunt cum quisquam veritatis rem. Excepturi mollitia, odio adipisci
@@ -48,7 +48,19 @@ const Speech: React.FC<ISpeech> = ({}) => {
           <br />
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ab
           repellat at odio perspiciatis vel alias obcaecati reiciendis, soluta
-          quos?
+          quos? */}
+          Assalamualaikum Warahmatullahi Wabarakatuh.
+          <br />
+          Puji syukur kepada Allah Subhana wa Taala atas nikmat yang
+          dianugerahkan, Salawat serta salam kepada junjungan nabi besar
+          Muhammad Sallahu Alai wa Sallam. Saya ucapkan banyak terima kasih
+          kepada mahasiswa KKN Universitas Hasanuddin gelombang 109 yang telah
+          membantu membuatkan website profil untuk Kelurahan Banyorang, dengan
+          adanya website ini supaya meningkatkan daya tarik masyarakat untuk
+          sama sama memajukan Kelurahan Banyorang baik dari aspek ekonomi dan
+          lain lain. mudah mudahan dengan adanya website ini Kelurahan Banyorang
+          dapat berkembang jauh lebih baik.
+          Wassalamualaikum Warohmatullahi Wabarokatuh.
         </Text>
       </Stack>
     </Group>

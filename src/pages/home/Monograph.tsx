@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { ForwardIconBold } from "../../assets/icons/Fluent";
 import MonografiCircle from "../../components/MonografiCircle.component";
 import MyModal from "../../components/MyModal.component";
-import VerticalDivider from "../../components/VerticalDivider.component";
 import MonographDetailText from "./MonographDetailText.component";
 
 export interface IMonograph {}
