@@ -51,6 +51,9 @@ const About: React.FC<IAbout> = ({}) => {
               kamis, penyuluhan pengenalan bahan alam untuk pembuatan pupuk
               organik, perancangan mesin penyortir biji kopi, perancangan mesin
               pengering hasil pertanian dan banyak lainnya.
+              <br/>
+              <br/>
+              Website ini dibuat menggunakan bahasa pemrograman Typescript dan framework React dengan waktu pengerjaan selama 2-3 minggu
             </Text>
 
             <VerticalDivider h="lg" />

@@ -50,6 +50,12 @@ const MainLayout: React.FC<IMainLayout> = ({ children }) => {
                 UMKM
               </Link>
               <Link
+                to={"/bagan-kelurahan"}
+                className="text-primary-text-500 text-xl tracking-[0.01em] cursor-pointer"
+              >
+                Bagan
+              </Link>
+              <Link
                 to={"/galeri"}
                 className="text-primary-text-500 text-xl tracking-[0.01em] cursor-pointer"
               >
