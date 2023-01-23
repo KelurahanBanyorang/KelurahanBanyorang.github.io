@@ -24,46 +24,47 @@ import { FloatingTooltip } from "../components/Tooltip.component";
 
 export interface IMainLayout {
   children: JSX.Element;
+  activePage: "umkm" | "beranda" | "galeri" | "bagan" | "tentang"
 }
 
-const MainLayout: React.FC<IMainLayout> = ({ children }) => {
+const MainLayout: React.FC<IMainLayout> = ({ children, activePage }) => {
   return (
     <AppShell
       padding={0}
       header={
-        <Stack p="xs" className="items-center flex flex-row pr-6 pt-4">
-          <Group className="w-full justify-between">
-            <Text className="text-primary-text-500 text-[30px] font-poppins-semibold ml-4">
+        <Stack className="items-center flex flex-row sticky top-0 z-50 bg-white ">
+          <Group className="w-full ml-7 justify-between py-3 border-b border-secondary-500 pr-6">
+            <Text className="text-primaryDarkBlue text-[30px] font-poppins-bold ">
               Banyorang
             </Text>
-            <Group className="self-end">
+            <Group className="">
               <Link
                 to={"/"}
-                className="text-primary-text-500 text-xl tracking-[0.01em] cursor-pointer"
+                className={`${activePage=="beranda"? "text-primary-text-500" : "text-secondary-text-500"} font-poppins text-[18px] tracking-[0.01em] cursor-pointer hover:text-primary-text-500 transition-all`}
               >
                 Beranda
               </Link>
               <Link
                 to={"/umkm"}
-                className="text-primary-text-500 text-xl tracking-[0.01em] cursor-pointer"
+                className={`${activePage=="umkm"? "text-primary-text-500" : "text-secondary-text-500"} font-poppins text-[18px] tracking-[0.01em] cursor-pointer hover:text-primary-text-500 transition-all`}
               >
                 UMKM
               </Link>
               <Link
                 to={"/bagan-kelurahan"}
-                className="text-primary-text-500 text-xl tracking-[0.01em] cursor-pointer"
+                className={`${activePage=="bagan"? "text-primary-text-500" : "text-secondary-text-500"} font-poppins text-[18px] tracking-[0.01em] cursor-pointer hover:text-primary-text-500 transition-all`}
               >
                 Bagan
               </Link>
               <Link
                 to={"/galeri"}
-                className="text-primary-text-500 text-xl tracking-[0.01em] cursor-pointer"
+                className={`${activePage=="galeri"? "text-primary-text-500" : "text-secondary-text-500"} font-poppins text-[18px] tracking-[0.01em] cursor-pointer hover:text-primary-text-500 transition-all`}
               >
                 Galeri
               </Link>
               <Link
                 to={"/tentang"}
-                className="text-primary-text-500 text-xl tracking-[0.01em] cursor-pointer"
+                className={`${activePage=="tentang"? "text-primary-text-500" : "text-secondary-text-500"} font-poppins text-[18px] tracking-[0.01em] cursor-pointer hover:text-primary-text-500 transition-all`}
               >
                 Tentang
               </Link>
@@ -72,7 +73,7 @@ const MainLayout: React.FC<IMainLayout> = ({ children }) => {
         </Stack>
       }
       footer={
-        <Stack className="mt-[100px] bg-primary-text-500 px-14 pt-10 pb-4 border-t-8 border-r-8 rounded-tr-sm border-primaryGreen mr-8">
+        <Stack className="mt-[100px] bg-primary-text-500 px-14 pt-10 pb-4 border-t-8 border-r-8 rounded-tr-sm border-primaryDarkBlue mr-8">
           <Group className="justify-between w-full mb-6">
             {/* <Text className="font-poppins text-[20px] text-primary-text-500">
               KKN Unhas

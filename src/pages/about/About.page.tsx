@@ -13,7 +13,7 @@ const About: React.FC<IAbout> = ({}) => {
   //   window.scrollTo(0, 0);
   // }, []);
   return (
-    <MainLayout>
+    <MainLayout activePage="tentang">
       <Stack className="mx-24 mt-10">
         <Stack className="gap-0 mb-8">
           <Stack className="gap-0 mb-0">

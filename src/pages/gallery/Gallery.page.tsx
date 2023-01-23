@@ -25,7 +25,7 @@ const MyGallery: React.FC<IMyGallery> = ({}) => {
     setIsGalleryModalOpened(true);
   }
   return (
-    <MainLayout>
+    <MainLayout activePage="galeri">
       <Stack>
         <Modal
           opened={isGalleryModalOpened}

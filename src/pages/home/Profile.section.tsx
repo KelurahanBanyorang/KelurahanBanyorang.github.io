@@ -1,4 +1,4 @@
-import { Stack, Text } from "@mantine/core";
+import { Loader, Stack, Text } from "@mantine/core";
 import React, { useState } from "react";
 import petaDetail from "../../assets/img/peta-detail.jpg";
 import mapThumbnail from "../../assets/img/peta-thumbnail.jpg";
@@ -15,8 +15,14 @@ const Profile: React.FC<IProfile> = ({}) => {
         setOpened={setIsMapDetailOpened}
         title={"Detail Peta Kelurahan Banyorang"}
         children={
-          <div>
-            <img src={petaDetail} />
+          <div className="flex flex-col">
+            <img src={petaDetail} className="z-10" />
+            <Loader
+              size="xl"
+              variant="dots"
+              color={"#00337C"}
+              className="-z-10 self-center absolute top-1/2"
+            />
           </div>
         }
       />

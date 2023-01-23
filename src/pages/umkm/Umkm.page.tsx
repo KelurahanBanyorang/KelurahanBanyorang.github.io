@@ -8,7 +8,7 @@ export interface IUmkm {}
 
 const Umkm: React.FC<IUmkm> = ({}) => {
   return (
-    <MainLayout>
+    <MainLayout activePage="umkm">
       <Stack>
         <UmkmHeader />
         <Stack className="mx-16 gap-12">

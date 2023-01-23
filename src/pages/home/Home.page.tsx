@@ -12,7 +12,7 @@ export interface IHome {}
 
 const Home: React.FC<IHome> = ({}) => {
   return (
-    <MainLayout>
+    <MainLayout activePage="beranda">
       <Stack>
         <Jumbotron />
         <Speech />
