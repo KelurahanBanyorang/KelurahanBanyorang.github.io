@@ -9,7 +9,7 @@ export interface ICircleLogo {
 const CircleLogo: React.FC<ICircleLogo> = ({ src, p = "p-3" }) => {
   return (
     <div
-      className={`w-[86px] bg-white rounded-full ${p} shadow-[0_0_7px_2px_rgba(139,139,139,0.9)]`}
+      className={`md:w-[86px] bg-white rounded-full ${p} shadow-[0_0_7px_2px_rgba(139,139,139,0.9)] w-[72px]`}
     >
       <img src={src} />
     </div>

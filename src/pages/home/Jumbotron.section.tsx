@@ -8,22 +8,22 @@ export interface IJumbotron {}
 
 const Jumbotron: React.FC<IJumbotron> = ({}) => {
   return (
-    <div className="rounded-bl-lg bg-jumbotron m-0 p-0 w-full ml-7 h-[500px] bg-cover mb-32">
+    <div className="rounded-bl-lg bg-jumbotron m-0 p-0 w-full ml-3 md:ml-7 h-[300px] md:h-[500px] bg-cover mb-20 md:mb-32">
       <Stack className="rounded-bl-lg bg-gradient-to-r from-primaryDarkerBlue to-transparent h-full w-full relative">
         {/* <Stack className="gap-0 bg-white w-fit pr-6 rounded-r-md mt-40">
         <Text className="font-poppins-semibold text-2xl text-primaryGreen">Selamat Datang,</Text>
         <Text className="font-poppins-semibold text-[38px] text-primaryGreen -mt-2">Di Website Promosi</Text>
         <Text className="font-poppins-semibold text-[38px] text-primaryGreen -mt-4">Kelurahan Banyorang</Text>
         </Stack> */}
-        <Stack className="gap-2 w-fit pr-6 rounded-r-md mt-40 pl-6">
-          <Stack className="gap-0 border-l-[10px] pl-6 border-primaryGreen">
-            <Text className="font-poppins-semibold text-2xl text-white">
+        <Stack className="gap-2 w-fit pr-6 rounded-r-md mt-16 md:mt-40 pl-6">
+          <Stack className="gap-0 border-l-[6px] md:border-l-[10px] pl-4 md:pl-6 border-primaryGreen">
+            <Text className="font-poppins md:text-2xl text-xl text-white">
               Selamat Datang,
             </Text>
-            <Text className="font-poppins-semibold text-[38px] text-white -mt-2">
+            <Text className="font-poppins-semibold text-[28px] md:text-[38px] text-white -mt-2">
               Di Website Profil
             </Text>
-            <Text className="font-poppins-semibold text-[38px] text-white -mt-4">
+            <Text className="font-poppins-semibold text-[28px] md:text-[38px] text-white -mt-4">
               Kelurahan Banyorang
             </Text>
           </Stack>
@@ -37,7 +37,7 @@ const Jumbotron: React.FC<IJumbotron> = ({}) => {
             Selengkapnya
           </Button>
         </Stack>
-        <Group className="absolute -bottom-10 right-0 mr-20 gap-8">
+        <Group className="absolute -bottom-10 right-0 mr-10 md:mr-20 gap-4 md:gap-8">
           <CircleLogo src={logoBantaeng} />
           {/* <CircleLogo src={logoBantaeng} /> */}
           <CircleLogo src={logoKKN} p="p-[10px]" />

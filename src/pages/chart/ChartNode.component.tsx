@@ -12,7 +12,8 @@ export interface IChartNode {
 const ChartNode: React.FC<IChartNode> = ({ nodeOrder, img=noImage, name="Pak ..", position="Jabatan" }) => {
   return (
     <Stack
-      className={`gap-0 ${nodeOrder == 0 ? "w-[125vw] sm:2-[150vw]" : ""} ${
+    // w-[150vw] md:w-[125vw]
+      className={`gap-0 ${
         nodeOrder == 2 ? "mb-4" : ""
       }`}
     >
@@ -20,10 +21,10 @@ const ChartNode: React.FC<IChartNode> = ({ nodeOrder, img=noImage, name="Pak .."
         src={img}
         className={`${
           nodeOrder == 0
-            ? "w-24 h-24"
+            ? "md:w-20 md:h-20 h-14 w-14"
             : nodeOrder == 1
-            ? "w-20 h-20"
-            : "w-[72px] h-[72px]"
+            ? "w-10 h-10"
+            : "w-8 h-w-8"
         } self-center rounded-full ${
           nodeOrder == 0
             ? "bg-secondary-500"

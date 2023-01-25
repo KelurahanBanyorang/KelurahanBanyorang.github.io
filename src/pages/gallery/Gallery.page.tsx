@@ -114,8 +114,8 @@ const MyGallery: React.FC<IMyGallery> = ({}) => {
             </Group>
           </div>
         </Modal>
-        <div className="mt-10 mb-4 mx-24 bg-galeri bg-cover h-[400px] flex flex-col justify-center relative">
-          <Stack className="gap-0 border-[6px] w-[50%] border-white ml-6 p-4 bg-black/[0.3] rounded-sm">
+        <div className="mt-10 mb-4 mx-8 md:mx-24 bg-galeri bg-cover h-[400px] flex flex-col justify-center relative">
+          <Stack className="gap-0 border-4 md:border-[6px] w-[95%] md:w-[50%] border-white ml-2 md:ml-6 p-4 bg-black/[0.3] rounded-sm">
             <Group className="gap-2">
               <Text className="self-end font-poppins-semibold text-[48px] text-white">
                 Galeri
@@ -137,7 +137,7 @@ const MyGallery: React.FC<IMyGallery> = ({}) => {
           {/* <Text className="font-poppins-semibold text-[48px] text-primaryBlue px-3 text-center">
             Galeri
           </Text> */}
-          <Group className="justify-center w-[60%] self-center gap-12 mb-20">
+          <Group className="justify-center w-full md:w-[60%] self-center gap-12 mb-20">
             <Stack>
               <div className="border-[16px] border-primaryGreen border-r-white border-b-white rounded-full">
                 <img src={camera} className="w-48 rounded-full" />
@@ -150,7 +150,7 @@ const MyGallery: React.FC<IMyGallery> = ({}) => {
                 </Text>
               </Stack>
               <VerticalDivider h="sm" />
-              <Text className="w-[400px] text-primary-text-500 tracking-1 text-justify">
+              <Text className="w-full md:w-[400px] text-primary-text-500 tracking-1 text-justify">
                 <Text className="inline-block font-poppins-semibold">
                   Tidak ada hak cipta.
                 </Text>{" "}

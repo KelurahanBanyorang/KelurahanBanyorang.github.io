@@ -8,10 +8,10 @@ export interface ISpeech {}
 
 const Speech: React.FC<ISpeech> = ({}) => {
   return (
-    <Group className="justify-center w-[80%] self-center gap-20">
+    <Group className="justify-center w-[80%] self-center gap-10 md:gap-20">
       <Stack>
-        <div className="border-[16px] border-primaryGreen border-r-white border-b-white rounded-full">
-          <img src={ketuaLurah} className="w-64 rounded-full" />
+        <div className="self-center w-[200px] md:w-[280px] border-[12px] md:border-[16px] border-primaryGreen border-r-white border-b-white rounded-full">
+          <img src={ketuaLurah} className="w-fit rounded-full" alt="Foto Ketua Lurah" />
         </div>
         <Stack className="gap-0">
           <Text className="font-poppins-bold text-[22px] text-primary-text-500 self-center">
@@ -26,34 +26,23 @@ const Speech: React.FC<ISpeech> = ({}) => {
         <QuotesIconOutline
           size={96}
           color={"#deddf1"}
-          className="absolute -z-10 right-0 top-0"
+          className="absolute -z-10 right-0 -bottom-6 md:top-0"
         />
-        <Stack className="gap-0">
-          <Text className="font-poppins-bold text-[22px] text-primary-text-500">
+        <Stack className="gap-2 md:gap-0">
+          <Text className="font-poppins-bold text-[18px] md:text-[22px] text-primary-text-500">
             Kata Sambutan
           </Text>
-          <Text className="font-poppins-bold text-[32px] text-secondary-text-500 -mt-2">
+          <Text className="font-poppins-bold text-[22px] md:text-[32px] text-secondary-text-500 -mt-2">
             Untuk Pengunjung Website
           </Text>
         </Stack>
         <VerticalDivider />
-        <Text className="w-[700px] text-primary-text-500 tracking-1 text-justify">
-          {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga nemo
-          minima deserunt ullam at ipsam animi voluptas officia numquam
-          consequatur ad hic, reiciendis enim quo nesciunt atque nam unde
-          incidunt cum quisquam veritatis rem. Excepturi mollitia, odio adipisci
-          iure recusandae voluptas officiis. Eos magni maiores facere omnis ipsa
-          illo tenetur?
-          <br />
-          <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ab
-          repellat at odio perspiciatis vel alias obcaecati reiciendis, soluta
-          quos? */}
+        <Text className="md:w-[600px] text-primary-text-500 tracking-1 text-justify">
           Assalamualaikum Warahmatullahi Wabarakatuh.
-          <br />
           Puji syukur kepada Allah Subhana wa Taala atas nikmat yang
           dianugerahkan, Salawat serta salam kepada junjungan nabi besar
           Muhammad Sallahu Alai wa Sallam. Salam sejahterah untuk kita semua
+          <br />
           <br />
           Dewasa ini, perkembangan teknologi, komunikasi dan informasi membawa
           kemajuan yang sangat pesat di berbagai bidang kehidupan. Dengan adanya

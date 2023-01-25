@@ -26,7 +26,7 @@ const Chart: React.FC<IChart> = ({}) => {
   useEffect(() => {
     if (viewport != null && rwData.size > 0) {
       viewport!.current!.scrollTo({
-        left: viewport!.current!.scrollWidth / 10,
+        left: viewport!.current!.scrollWidth / 4,
         behavior: "auto"
       });
     }
@@ -102,7 +102,7 @@ const Chart: React.FC<IChart> = ({}) => {
             />
           ) : (
             <ScrollArea
-              style={{ width: "100vw" }}
+              // style={{ width: "100vw" }}
               type="always"
               offsetScrollbars
               // className="mr-10"
@@ -114,6 +114,7 @@ const Chart: React.FC<IChart> = ({}) => {
                     }
                 }
               })}
+              className="w-[100vw]"
               viewportRef={viewport}
             >
               <Tree

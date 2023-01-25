@@ -14,20 +14,20 @@ const About: React.FC<IAbout> = ({}) => {
   // }, []);
   return (
     <MainLayout activePage="tentang">
-      <Stack className="mx-24 mt-10">
-        <Stack className="gap-0 mb-8">
+      <Stack className="mx-8 md:mx-24 mt-10">
+        <Stack className="gap-0 mb-4 md:mb-8">
           <Stack className="gap-0 mb-0">
-            <Text className="font-poppins-semibold text-[42px] text-primary-text-500">
+            <Text className="font-poppins-semibold text-[32px] md:text-[42px] text-primary-text-500">
               Tentang Website
             </Text>
-            <Text className="mb-3 font-poppins-semibold text-[22px] text-secondary-text-500 -mt-2">
+            <Text className="mb-3 font-poppins-semibold text-[18px] md:text-[22px] text-secondary-text-500 -mt-2">
               Kelurahan Banyorang
             </Text>
           </Stack>
           <div className="mb-4">
             <div className="flex float-right">
               <Stack className="filter relative gap-1 w-fit">
-                <img src={logoKKN} alt="Logo KKN" className="w-[300px] block" />
+                <img src={logoKKN} alt="Logo KKN" className="w-[180px] md:w-[300px] block" />
                 <Text className="text-sm text-secondary-text-500 text-center">
                   Gambar Logo KKN
                 </Text>
@@ -70,10 +70,10 @@ const About: React.FC<IAbout> = ({}) => {
             </Text>
           </div>
         </Stack>
-        <div className="w-[75%] relative self-center mb-10">
+        <div className="w-[95%] md:w-[75%] relative self-center mb-4 md:mb-10">
           <img src={fotoKKN} />
-          <div className="absolute -top-6 -right-6 h-40 w-40 bg-primaryBlue -z-10"></div>
-          <div className="absolute -bottom-1 -left-6 h-40 w-40 bg-primaryBlue -z-10"></div>
+          <div className="absolute hidden md:block -top-6 -right-6 h-40 w-40 bg-primaryBlue -z-10"></div>
+          <div className="absolute hidden md:block -bottom-1 -left-6 h-40 w-40 bg-primaryBlue -z-10"></div>
           <StaticTooltip label="Halo" position="top-end">
             <div className="absolute top-[65px] right-[340px] w-12 h-12 bg-transparent" />
           </StaticTooltip>

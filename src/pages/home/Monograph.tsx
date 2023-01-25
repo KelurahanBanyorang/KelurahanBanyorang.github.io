@@ -113,10 +113,10 @@ const Monograph: React.FC<IMonograph> = ({}) => {
           </Text>
         </Stack>
       </MyModal>
-      <Text className="font-poppins-bold text-[46px] text-primary-text-500 text-center">
+      <Text className="font-poppins-bold text-[36px] md:text-[46px] text-primary-text-500 text-center">
         Data Monografi
       </Text>
-      <Group className="justify-center gap-16">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-16">
         <MonografiCircle size="sm" text="15" description="RT" />
         <MonografiCircle
           size="md"
@@ -134,7 +134,7 @@ const Monograph: React.FC<IMonograph> = ({}) => {
         />
         <MonografiCircle size="md" text={"979"} description="Kepala Keluarga" />
         <MonografiCircle size="sm" text="5" description="RW" />
-      </Group>
+      </div>
       <Button
         variant="light"
         className="self-center flex gap-2 hover:bg-white"

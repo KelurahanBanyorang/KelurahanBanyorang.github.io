@@ -11,20 +11,20 @@ const Umkm: React.FC<IUmkm> = ({}) => {
     <MainLayout activePage="umkm">
       <Stack>
         <UmkmHeader />
-        <Stack className="mx-16 gap-12">
-          <div className="mr-8">
+        <Stack className="mx-4 md:mx-16 gap-8 md:gap-12">
+          <div className="md:mr-8">
             <UmkmRwTable title="Daftar UMKM RW 1" rw={1} />
           </div>
-          <div className="ml-8">
+          <div className="md:ml-8">
             <UmkmRwTable title="Daftar UMKM RW 2" tableHeaderTitle="2" rw={2} />
           </div>
-          <div className="mr-8">
+          <div className="md:mr-8">
             <UmkmRwTable title="Daftar UMKM RW 3" rw={3} />
           </div>
-          <div className="ml-8">
+          <div className="md:ml-8">
             <UmkmRwTable title="Daftar UMKM RW 4" tableHeaderTitle="2" rw={4} />
           </div>
-          <div className="mr-8">
+          <div className="md:mr-8">
             <UmkmRwTable title="Daftar UMKM RW 5" rw={5} />
           </div>
         </Stack>

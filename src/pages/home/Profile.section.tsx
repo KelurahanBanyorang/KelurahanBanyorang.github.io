@@ -26,9 +26,9 @@ const Profile: React.FC<IProfile> = ({}) => {
           </div>
         }
       />
-      <Stack className="mt-28 mx-[96px]">
-        <Stack className="gap-0 border-l-[10px] pl-6 border-l-primaryBlue">
-          <Text className="font-poppins-bold text-[46px] text-primary-text-500">
+      <Stack className="mt-28 mx-[24px] md:mx-[96px]">
+        <Stack className="gap-0 border-l-[6px] md:border-l-[10px] pl-4 md:pl-6 border-l-primaryBlue">
+          <Text className="font-poppins-bold text-[36px] md:text-[46px] text-primary-text-500">
             Profil
           </Text>
           <Text className="text-[22px] font-poppins-semibold -mt-2 text-secondary-text-500">
