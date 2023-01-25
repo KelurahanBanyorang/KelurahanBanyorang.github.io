@@ -37,7 +37,7 @@ const Speech: React.FC<ISpeech> = ({}) => {
           </Text>
         </Stack>
         <VerticalDivider />
-        <Text className="w-[600px] text-primary-text-500 tracking-1 text-justify">
+        <Text className="w-[700px] text-primary-text-500 tracking-1 text-justify">
           {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga nemo
           minima deserunt ullam at ipsam animi voluptas officia numquam
           consequatur ad hic, reiciendis enim quo nesciunt atque nam unde
@@ -53,14 +53,18 @@ const Speech: React.FC<ISpeech> = ({}) => {
           <br />
           Puji syukur kepada Allah Subhana wa Taala atas nikmat yang
           dianugerahkan, Salawat serta salam kepada junjungan nabi besar
-          Muhammad Sallahu Alai wa Sallam. Saya ucapkan banyak terima kasih
-          kepada mahasiswa KKN Universitas Hasanuddin gelombang 109 yang telah
-          membantu membuatkan website profil untuk Kelurahan Banyorang, dengan
-          adanya website ini supaya meningkatkan daya tarik masyarakat untuk
-          sama sama memajukan Kelurahan Banyorang baik dari aspek ekonomi dan
-          lain lain. mudah mudahan dengan adanya website ini Kelurahan Banyorang
-          dapat berkembang jauh lebih baik.
-          Wassalamualaikum Warohmatullahi Wabarokatuh.
+          Muhammad Sallahu Alai wa Sallam. Salam sejahterah untuk kita semua
+          <br />
+          Dewasa ini, perkembangan teknologi, komunikasi dan informasi membawa
+          kemajuan yang sangat pesat di berbagai bidang kehidupan. Dengan adanya
+          pemanfaatan teknologi, komunikasi dan informasi inovasi bisa hadir
+          lewat media transformasi digital hal ini juga sebagai perwujudan
+          Reformasi Birokrasi dan Penerapan E-government yang merupakanamanat
+          Inpres No.3 tahun 2003 tentang penyelenggaran tata kelola pemerintahan
+          secara elektronik. Saya berharap website ini meningkatkan daya tarik
+          masyarakat untuk sama sama memajukan Kelurahan Banyorang baik dari
+          aspek ekonomi dan lain lain. Mudah-mudahan dengan adanya website ini
+          Kelurahan Banyorang dapat berkembang jauh lebih baik.
         </Text>
       </Stack>
     </Group>

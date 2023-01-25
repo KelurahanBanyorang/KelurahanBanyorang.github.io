@@ -1,35 +1,19 @@
-// import React from "react";
-// import ReactImageGallery from "react-image-gallery"
+import React from "react";
+import MainLayout from "../layouts/MainLayout.layout";
 
-// const images = [
-//   {
-//     original: "https://picsum.photos/id/1018/1000/600/",
-//     thumbnail: "https://picsum.photos/id/1018/250/150/"
-//   },
-//   {
-//     original: "https://picsum.photos/id/1015/1000/600/",
-//     thumbnail: "https://picsum.photos/id/1015/250/150/"
-//   },
-//   {
-//     original: "https://picsum.photos/id/1019/1000/600/",
-//     thumbnail: "https://picsum.photos/id/1019/250/150/"
-//   }
-// ];
+export interface ITest {}
 
-// export interface ITest {}
-
-// const Test: React.FC<ITest> = ({}) => {
-//   return <ReactImageGallery items={images} />;
-// };
-// export default Test;
-
-import React from 'react';
-
-export interface IComponent {}
-
-const Component: React.FC<IComponent> = ({ }) => {
+const Test: React.FC<ITest> = ({}) => {
   return (
-    <></>
-  )
-}
-export default Component;
+    <MainLayout activePage="beranda">
+      <div className="rounded-bl-lg bg-jumbotron m-0 p-0 w-full ml-7 h-[500px] bg-cover mb-32">
+        <div className="rounded-bl-lg bg-gradient-to-r from-primaryDarkerBlue via-transparent to-transparent h-full w-full relative">
+          <div className="text-white">
+            Halo
+          </div>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+export default Test;

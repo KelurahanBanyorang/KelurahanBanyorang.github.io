@@ -35,7 +35,9 @@ const MyGallery: React.FC<IMyGallery> = ({}) => {
           title={
             <Group className="gap-2">
               {/* <Text className="bg-primaryBlue font-poppins text-white px-1 py-[1px]">{selectedImageIdx + 1}.</Text> */}
-              <Text className="font-poppins text-primary-text-500 px-1 py-[1px]">{selectedImageIdx + 1}.</Text>
+              <Text className="font-poppins text-primary-text-500 px-1 py-[1px]">
+                {selectedImageIdx + 1}.
+              </Text>
               {galleryImages[selectedImageIdx].alt || "Gallery Foto"}
             </Group>
           }
@@ -120,9 +122,13 @@ const MyGallery: React.FC<IMyGallery> = ({}) => {
               </Text>
             </Group>
             <Text className="text-lg text-white text-justify mt-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+              {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
               quaerat odit provident cum architecto assumenda tenetur
-              perspiciatis repudiandae sequi distinctio quae vitae quibusdam
+              perspiciatis repudiandae sequi distinctio quae vitae quibusdam */}
+              Galeri dan kumpulan foto Kelurahan Banyorang Tompobulu, mulai dari
+              kehidupan keseharian dan aktivitas warga, pemandangan alam
+              kelurahan Banyorang, perkebunan, pertanian, suasana kelurahan, dan
+              lain-lain.
             </Text>
           </Stack>
           <div className="absolute -bottom-6 -right-6 h-40 w-40 bg-gradient-to-r from-primaryGreen to-primaryBlue -z-10"></div>
@@ -144,10 +150,14 @@ const MyGallery: React.FC<IMyGallery> = ({}) => {
                 </Text>
               </Stack>
               <VerticalDivider h="sm" />
-              <Text className="w-[300px] text-primary-text-500 tracking-1 text-justify">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
-                nemo minima deserunt ullam at ipsam animi voluptas officia
-                numquam
+              <Text className="w-[400px] text-primary-text-500 tracking-1 text-justify">
+                <Text className="inline-block font-poppins-semibold">
+                  Tidak ada hak cipta.
+                </Text>{" "}
+                Foto-foto berikut diabadikan dan dimiliki oleh mahasiswa KKN.
+                Anda dapat menyalin, memodifikasi, mendistribusikan, dan
+                menampilkan karya tersebut, bahkan untuk tujuan komersial,
+                semuanya tanpa meminta izin.
               </Text>
             </Stack>
           </Group>

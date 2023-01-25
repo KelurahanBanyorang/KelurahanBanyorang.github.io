@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}"
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     colors: {
       light: "#FFFFFF",
@@ -129,10 +127,16 @@ module.exports = {
       }
     },
     fontFamily: {
-      'poppins': ['poppins', 'sans-serif'],
-      'poppins-bold': ['poppins-bold', 'sans-serif'],
-      'poppins-light': ['poppins-light', 'sans-serif'],
-      'poppins-semibold': ['poppins-semibold', 'sans-serif'],
+      'poppins': [
+        'poppins', 'sans-serif'
+      ],
+      'poppins-bold': [
+        'poppins-bold', 'sans-serif'
+      ],
+      'poppins-light': [
+        'poppins-light', 'sans-serif'
+      ],
+      'poppins-semibold': ['poppins-semibold', 'sans-serif']
     },
     fontSize: {
       xs: 10,
@@ -142,13 +146,13 @@ module.exports = {
       xl: 20,
       "2xl": 24
     },
-    letterSpacing:{
+    letterSpacing: {
       "01": "0.001em",
       "1": "0.0015em",
       "2": "0.0025em",
       "4": "0.004em"
     },
-    dropShadow:{
+    dropShadow: {
       "1": "0px 1px 4px rgba(0, 0, 0, 0.12)"
     },
     extend: {
@@ -156,9 +160,9 @@ module.exports = {
         'jumbotron': "url('../src/assets/img/jumbotron.jpg')",
         'umkm': "url('../src/assets/img/umkm.jpg')",
         'umkm2': "url('../src/assets/img/umkm2.jpg')",
-        'galeri': "url('../src/assets/img/galeri.jpg')",
-      },
+        'galeri': "url('../src/assets/img/galeri.jpg')"
+      }
     }
   },
-  plugins: [],
+  plugins: [require ('@tailwindcss/line-clamp'),]
 }

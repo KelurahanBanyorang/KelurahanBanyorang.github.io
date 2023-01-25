@@ -8,7 +8,7 @@ const UmkmHeader: React.FC<IUmkmHeader> = ({}) => {
   return (
     <>
       <div className="mt-10 mb-4 mx-24 bg-umkm bg-cover h-[300px]">
-        <Stack className="gap-0 bg-gradient-to-r from-white via-white to-transparent h-full w-full">
+        <Stack className="gap-0 bg-gradient-to-r from-white via-white/[0.9] to-transparent h-full w-full">
           <Stack className="gap-0">
             <Text className="font-poppins-semibold text-[48px] text-primary-text-500">
               Data UMKM
@@ -19,11 +19,17 @@ const UmkmHeader: React.FC<IUmkmHeader> = ({}) => {
           </Stack>
           <VerticalDivider h="sm" />
           <Text className="text-lg text-primary-text-500 text-justify w-[50%] mt-4">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab,
+            {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab,
             soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Fugiat quaerat odit provident cum architecto assumenda tenetur
             perspiciatis repudiandae sequi distinctio quae vitae quibusdam
-            nostrum.
+            nostrum. */}
+            UMKM (Usaha Mikro Kecil dan Menengah) adalah usaha produktif yang
+            dimiliki perorangan maupun badan usaha yang telah memenuhi kriteria
+            sebagai usaha mikro. Seperti diatur dalam peraturan
+            perundang-undangan No. 20 tahun 2008, kriteria UMKM dibedakan secara
+            masing-masing meliputi usaha mikro, usaha kecil, dan usaha menengah.
+            Berikut Daftar UMKM di Kelurahan Banyorang dikelompokkan berdasarkan RW-nya.
           </Text>
         </Stack>
       </div>

@@ -5,6 +5,7 @@ import About from "./pages/about/About.page";
 import Chart from "./pages/chart/Chart.page";
 import Gallery from "./pages/gallery/Gallery.page";
 import Home from "./pages/home/Home.page";
+import Test from "./pages/test";
 import Umkm from "./pages/umkm/Umkm.page";
 import ScrollToTop from "./ScrollToTop";
 
