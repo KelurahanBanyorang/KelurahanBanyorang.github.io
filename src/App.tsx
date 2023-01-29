@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import "./fonts/Poppins/Poppins-Medium.ttf";
 import About from "./pages/about/About.page";
@@ -11,7 +11,7 @@ import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -21,7 +21,7 @@ function App() {
         <Route path="/bagan-kelurahan" element={<Chart />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
