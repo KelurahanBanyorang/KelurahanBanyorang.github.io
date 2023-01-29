@@ -27,7 +27,11 @@ const About: React.FC<IAbout> = ({}) => {
           <div className="mb-4">
             <div className="flex float-right">
               <Stack className="filter relative gap-1 w-fit">
-                <img src={logoKKN} alt="Logo KKN" className="w-[180px] md:w-[300px] block" />
+                <img
+                  src={logoKKN}
+                  alt="Logo KKN"
+                  className="w-[180px] md:w-[300px] block"
+                />
                 <Text className="text-sm text-secondary-text-500 text-center">
                   Gambar Logo KKN
                 </Text>
@@ -46,14 +50,14 @@ const About: React.FC<IAbout> = ({}) => {
             </Text>
             <Text className="text-lg text-primary-text-500 text-justify mt-2">
               Mahasiswa Posko 2 KKNT Inovasi Teknologi Tepat Guna yang di
-              tempatkan di kelurahan Banyorang merupakan penanggung jawab
-              dalam pembuatan website ini. Posko 2 KKNT Inovasi Teknologi Tepat
-              Guna ini di ketuai oleh Jailani Ahmad dan beranggotakan 9 orang
-              yang berasal dari beberapa jurusan berbeda dari Universitas
-              Hasanuddin. Posko 2 menaruh harapan semoga kehadirannya mampu
-              memberikan dampak positif bagi kelurahan ini dan masyarakat
-              sekitar dengan mengadakan program kerja yang sesuai dengan kondisi
-              Banyorang saat ini.
+              tempatkan di kelurahan Banyorang merupakan penanggung jawab dalam
+              pembuatan website ini. Posko 2 KKNT Inovasi Teknologi Tepat Guna
+              ini di ketuai oleh Jailani Ahmad dan beranggotakan 9 orang yang
+              berasal dari beberapa jurusan berbeda dari Universitas Hasanuddin.
+              Posko 2 menaruh harapan semoga kehadirannya mampu memberikan
+              dampak positif bagi kelurahan ini dan masyarakat sekitar dengan
+              mengadakan program kerja yang sesuai dengan kondisi Banyorang saat
+              ini.
               <br /> <br />
               Diantara Program kerja yang dicanangkan oleh peserta KKN di
               kelurahan ini salah satunya yaitu Pembuatan Website Kelurahan
@@ -67,6 +71,26 @@ const About: React.FC<IAbout> = ({}) => {
               mengenai kelurahan banyorang sehingga diharapkan mampu menarik
               perhatian bagi masyarakat umum kemudian membuat Kelurahan
               Banyorang lebih dikenal lagi dan tentunya lebih maju.
+            </Text>
+            <Text className="text-primary-text-500 text-justify font-poppins-bold mt-6">
+              Beberapa dari Inovasi yang Ditawarkan:
+            </Text>
+            <Text className="text-primary-text-500 text-justify mt-2">
+              1. Mesin Pengering Hasil Pertanian
+              <br />
+              <a
+                href="https://drive.google.com/file/d/15SzSQUxWJ8MPyz9kDZ9T2RnWqvsscT95/view?usp=sharing"
+                target="_blank"
+                className="text-primaryBlue"
+              >
+                2. Modul Mesin Penyortir Biji Kopi
+              </a>
+              <br />
+              3. Pembuatan Website Profil Kelurahan
+              <br />
+              4. Pembuatan Peta Wilayah Banyorang
+              <br />
+              5. Dan lain-lain
             </Text>
           </div>
         </Stack>
