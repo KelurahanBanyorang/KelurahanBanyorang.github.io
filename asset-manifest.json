@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.241349ff.css",
-    "main.js": "/static/js/main.c38e8673.js",
+    "main.css": "/static/css/main.b81bda13.css",
+    "main.js": "/static/js/main.1d0de809.js",
     "static/js/787.d983846b.chunk.js": "/static/js/787.d983846b.chunk.js",
     "static/media/peta-detail.jpg": "/static/media/peta-detail.bd020c6eafbd90d8094b.jpg",
     "static/media/umkm2.jpg": "/static/media/umkm2.a492f09f2c65e3004b92.jpg",
@@ -21,12 +21,12 @@
     "static/media/bagan.png": "/static/media/bagan.8975e357737f1e842006.png",
     "static/media/unhas_logo.png": "/static/media/unhas_logo.87504985dda567bdc0c2.png",
     "index.html": "/index.html",
-    "main.241349ff.css.map": "/static/css/main.241349ff.css.map",
-    "main.c38e8673.js.map": "/static/js/main.c38e8673.js.map",
+    "main.b81bda13.css.map": "/static/css/main.b81bda13.css.map",
+    "main.1d0de809.js.map": "/static/js/main.1d0de809.js.map",
     "787.d983846b.chunk.js.map": "/static/js/787.d983846b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.241349ff.css",
-    "static/js/main.c38e8673.js"
+    "static/css/main.b81bda13.css",
+    "static/js/main.1d0de809.js"
   ]
 }
