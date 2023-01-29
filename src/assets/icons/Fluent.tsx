@@ -209,23 +209,23 @@ export function SearchIconOutline({
 
 export function ForwardIconBold({
   size = 24,
-  color = 'black',
+  color = "black",
   onClick,
   className
 }: IFluentProps) {
   return (
     <svg
-      width={size+`px`}
-      height={size+`px`}
+      width={size + `px`}
+      height={size + `px`}
       viewBox={`0 0 48 48`}
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
       onClick={onClick}
       className={className}
     >
       <path
-      d='m24 40.55-3.35-3.4 10.85-10.8H7.45v-4.7H31.5L20.65 10.8 24 7.45 40.55 24Z'
-      fill={color}
+        d="m24 40.55-3.35-3.4 10.85-10.8H7.45v-4.7H31.5L20.65 10.8 24 7.45 40.55 24Z"
+        fill={color}
       />
     </svg>
   );
@@ -233,23 +233,23 @@ export function ForwardIconBold({
 
 export function BackIconBold({
   size = 24,
-  color = 'black',
+  color = "black",
   onClick,
   className
 }: IFluentProps) {
   return (
     <svg
-      width={size+`px`}
-      height={size+`px`}
+      width={size + `px`}
+      height={size + `px`}
       viewBox={`0 0 48 48`}
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
       onClick={onClick}
       className={className}
     >
       <path
-      d='M24 40.55 7.45 24 24 7.45l3.35 3.3-10.85 10.9h24.05v4.7H16.5L27.35 37.2Z'
-      fill={color}
+        d="M24 40.55 7.45 24 24 7.45l3.35 3.3-10.85 10.9h24.05v4.7H16.5L27.35 37.2Z"
+        fill={color}
       />
     </svg>
   );
@@ -257,23 +257,23 @@ export function BackIconBold({
 
 export function UpArrowNoTailOutlineBold({
   size = 24,
-  color = 'black',
+  color = "black",
   onClick,
   className
 }: IFluentProps) {
   return (
     <svg
-      width={size+`px`}
-      height={size+`px`}
+      width={size + `px`}
+      height={size + `px`}
       viewBox={`0 0 48 48`}
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
       onClick={onClick}
       className={className}
     >
       <path
-      d='m14.15 31.9-3.35-3.35L24 15.35 37.2 28.5l-3.35 3.35L24 22Z'
-      fill={color}
+        d="m14.15 31.9-3.35-3.35L24 15.35 37.2 28.5l-3.35 3.35L24 22Z"
+        fill={color}
       />
     </svg>
   );
@@ -281,23 +281,23 @@ export function UpArrowNoTailOutlineBold({
 
 export function DownArrowNoTailOutlineBold({
   size = 24,
-  color = 'black',
+  color = "black",
   onClick,
   className
 }: IFluentProps) {
   return (
     <svg
-      width={size+`px`}
-      height={size+`px`}
+      width={size + `px`}
+      height={size + `px`}
       viewBox={`0 0 48 48`}
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
       onClick={onClick}
       className={className}
     >
       <path
-      d='M24 31.9 10.8 18.7l3.35-3.35 9.85 9.9 9.85-9.85 3.35 3.35Z'
-      fill={color}
+        d="M24 31.9 10.8 18.7l3.35-3.35 9.85 9.9 9.85-9.85 3.35 3.35Z"
+        fill={color}
       />
     </svg>
   );
@@ -305,23 +305,23 @@ export function DownArrowNoTailOutlineBold({
 
 export function AddIconOutline({
   size = 24,
-  color = 'black',
+  color = "black",
   onClick,
   className
 }: IFluentProps) {
   return (
     <svg
-      width={size+`px`}
-      height={size+`px`}
+      width={size + `px`}
+      height={size + `px`}
       viewBox={`0 0 48 48`}
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
       onClick={onClick}
       className={className}
     >
       <path
-      d='M22.85 37.5V25.15H10.5v-2.3h12.35V10.5h2.3v12.35H37.5v2.3H25.15V37.5Z'
-      fill={color}
+        d="M22.85 37.5V25.15H10.5v-2.3h12.35V10.5h2.3v12.35H37.5v2.3H25.15V37.5Z"
+        fill={color}
       />
     </svg>
   );
@@ -329,23 +329,44 @@ export function AddIconOutline({
 
 export function MinusIconOutline({
   size = 24,
-  color = 'black',
+  color = "black",
   onClick,
   className
 }: IFluentProps) {
   return (
     <svg
-      width={size+`px`}
-      height={size+`px`}
+      width={size + `px`}
+      height={size + `px`}
       viewBox={`0 0 48 48`}
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      onClick={onClick}
+      className={className}
+    >
+      <path d="M10.5 25.15v-2.3h27v2.3Z" fill={color} />
+    </svg>
+  );
+}
+
+export function DownloadIconOutline({
+  size = 24,
+  color = "black",
+  onClick,
+  className
+}: IFluentProps) {
+  return (
+    <svg
+      width={size + `px`}
+      height={size + `px`}
+      viewBox={`0 0 48 48`}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
       onClick={onClick}
       className={className}
     >
       <path
-      d='M10.5 25.15v-2.3h27v2.3Z'
-      fill={color}
+        d="M10.8 40.55q-1.35 0-2.375-1T7.4 37.15v-7.7h3.4v7.7h26.35v-7.7h3.4v7.7q0 1.4-1 2.4t-2.4 1ZM24 32.1 13.9 22.05l2.45-2.45 5.95 5.95V7.15h3.4v18.4l5.95-5.95 2.45 2.45Z"
+        fill={color}
       />
     </svg>
   );

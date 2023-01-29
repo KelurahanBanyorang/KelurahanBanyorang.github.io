@@ -1,16 +1,16 @@
 import { Grid, Stack, Text } from "@mantine/core";
 import React from "react";
 import ExploreCard from "./ExploreCard.component";
-import umkm from "../../assets/img/umkm2.jpg";
-import fotoKkn from "../../assets/img/foto_kkn3.jpg";
-import bagan from "../../assets/img/bagan.png";
-import galeri from "../../assets/img/galeri.jpg";
+import umkm from "../../../assets/img/umkm2.jpg";
+import fotoKkn from "../../../assets/img/foto_kkn3.jpg";
+import bagan from "../../../assets/img/bagan.png";
+import galeri from "../../../assets/img/galeri.jpg";
 
 export interface IExplore {}
 
 const Explore: React.FC<IExplore> = ({}) => {
   return (
-    <Stack className="mx-8 md:mx-12 mt-20">
+    <Stack className="mx-8 md:mx-12 mt-14 md:mt-20">
       <Text className="font-poppins-semibold text-[28px] md:text-[32px] text-primary-text-500 text-center mb-4">
         Jelajahi
       </Text>

@@ -1,8 +1,8 @@
 import { Group, Stack, Text } from "@mantine/core";
 import React from "react";
-import { LocationIcon } from "../../assets/icons/Fluent";
-import VerticalDivider from "../../components/VerticalDivider.component";
-import mapThumbnail from "../../assets/img/peta-thumbnail.jpg";
+import { LocationIcon } from "../../../assets/icons/Fluent";
+import VerticalDivider from "../../../components/VerticalDivider.component";
+import mapThumbnail from "../../../assets/img/peta-thumbnail.jpg";
 
 export interface ILocation {}
 

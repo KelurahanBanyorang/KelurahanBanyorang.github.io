@@ -1,8 +1,8 @@
 import { Button, Divider, Group, Stack, Text } from "@mantine/core";
 import React, { useState } from "react";
-import { ForwardIconBold } from "../../assets/icons/Fluent";
-import MonografiCircle from "../../components/MonografiCircle.component";
-import MyModal from "../../components/MyModal.component";
+import { ForwardIconBold } from "../../../assets/icons/Fluent";
+import MonographMainText from "./MonographMainText.component";
+import MyModal from "../../../components/MyModal.component";
 import MonographDetailText from "./MonographDetailText.component";
 
 export interface IMonograph {}
@@ -19,7 +19,7 @@ const Monograph: React.FC<IMonograph> = ({}) => {
       >
         <Stack className="">
           <Group className="mb-2">
-            <Stack className="w-[50%]">
+            <Stack className="w-[50%] self-start">
               <MonographDetailText
                 label="Provinsi"
                 description="Sulawesi Selatan"
@@ -30,7 +30,7 @@ const Monograph: React.FC<IMonograph> = ({}) => {
               />
               <MonographDetailText label="Kecamatan" description="Tompobulu" />
             </Stack>
-            <Stack>
+            <Stack className="self-start">
               <MonographDetailText label="Kode Desa" description="7303041003" />
               <MonographDetailText label="Jumlah RW" description="5" />
               <MonographDetailText label="Jumlah RT" description="15" />
@@ -64,11 +64,12 @@ const Monograph: React.FC<IMonograph> = ({}) => {
               Profesi Penduduk
             </Text>
             <Group className="mb-2">
-              <Stack className="w-[50%]">
+              <Stack className="w-[50%] self-start">
                 <MonographDetailText
                   label="Petani"
                   description="350"
                   wPlusMinusIcon
+                  
                 />
                 <MonographDetailText
                   label="Wiraswasta"
@@ -81,7 +82,7 @@ const Monograph: React.FC<IMonograph> = ({}) => {
                   wPlusMinusIcon
                 />
               </Stack>
-              <Stack>
+              <Stack className="self-start">
                 <MonographDetailText
                   label="Tenaga Pendidik"
                   description="50"
@@ -116,14 +117,14 @@ const Monograph: React.FC<IMonograph> = ({}) => {
       <Text className="font-poppins-bold text-[36px] md:text-[46px] text-primary-text-500 text-center">
         Data Monografi
       </Text>
-      <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-16">
-        <MonografiCircle size="sm" text="15" description="RT" />
-        <MonografiCircle
+      <div className="flex flex-row items-center justify-center gap-4 md:gap-6 lg:gap-16 mx-10">
+        <MonographMainText size="sm" text="15" description="RT" />
+        <MonographMainText
           size="md"
           text={"2968"}
           description="Jumlah Penduduk"
         />
-        <MonografiCircle
+        <MonographMainText
           size="lg"
           text={
             <>
@@ -132,8 +133,8 @@ const Monograph: React.FC<IMonograph> = ({}) => {
           }
           description={"Luas Kelurahan"}
         />
-        <MonografiCircle size="md" text={"979"} description="Kepala Keluarga" />
-        <MonografiCircle size="sm" text="5" description="RW" />
+        <MonographMainText size="md" text={"979"} description="Kepala Keluarga" />
+        <MonographMainText size="sm" text="5" description="RW" />
       </div>
       <Button
         variant="light"

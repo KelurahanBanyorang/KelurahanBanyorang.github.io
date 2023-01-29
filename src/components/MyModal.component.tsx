@@ -37,10 +37,13 @@ const MyModal = ({
           borderRadius: "6px",
         },
         title: {
-          fontSize: 24,
+          fontSize: 20,
           color: "#334155",
           fontWeight: 700,
-          fontFamily: "Poppins"
+          fontFamily: "Poppins",
+          '@media (min-width: 800px)': {
+            fontSize: 24
+          },
         },
       }}
     >

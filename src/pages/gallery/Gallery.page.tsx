@@ -53,14 +53,20 @@ const MyGallery: React.FC<IMyGallery> = ({}) => {
             title: {
               // display: "none"
               // margin: "20px"
-              fontSize: 18,
+              fontSize: 14,
               color: "#334155",
-              fontWeight: 600,
               marginTop: "16px",
-              marginBottom: "12px",
-              marginLeft: "20px",
+              marginBottom: "10px",
+              marginLeft: "18px",
+              fontWeight: 600,
               zIndex: 10,
-              fontFamily: "Poppins"
+              fontFamily: "Poppins",
+              '@media (min-width: 800px)': {
+                fontSize: 18,
+                marginTop: "18px",
+                marginBottom: "12px",
+                marginLeft: "20px",
+              },
             },
             close: {
               // display: "none"
@@ -76,7 +82,7 @@ const MyGallery: React.FC<IMyGallery> = ({}) => {
         >
           <div className="relative">
             {/* <div className="absolute -top-16 -left-6 h-40 w-40 bg-primaryBlue -z-50"></div> */}
-            <div className="absolute -bottom-6 -right-6 h-40 w-40 bg-primaryGreen -z-10"></div>
+            <div className="absolute -bottom-6 -right-6 h-40 w-40 bg-primaryGreen -z-10 hidden md:block"></div>
             <img src={galleryImages[selectedImageIdx].src} />
             <Group className="absolute -bottom-7 left-6 mr-20 gap-8">
               <div
@@ -122,9 +128,6 @@ const MyGallery: React.FC<IMyGallery> = ({}) => {
               </Text>
             </Group>
             <Text className="text-lg text-white text-justify mt-4">
-              {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              quaerat odit provident cum architecto assumenda tenetur
-              perspiciatis repudiandae sequi distinctio quae vitae quibusdam */}
               Galeri dan kumpulan foto Kelurahan Banyorang Tompobulu, mulai dari
               kehidupan keseharian dan aktivitas warga, pemandangan alam
               kelurahan Banyorang, perkebunan, pertanian, suasana kelurahan, dan

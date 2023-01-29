@@ -1,6 +1,6 @@
 import { Group, Stack, Text } from "@mantine/core";
 import React from "react";
-import PlusMinusIcon from "../../components/PlusMinusIcon.component";
+import PlusMinusIcon from "../../../components/PlusMinusIcon.component";
 
 export interface IMonographDetailText {
   label: string | JSX.Element;

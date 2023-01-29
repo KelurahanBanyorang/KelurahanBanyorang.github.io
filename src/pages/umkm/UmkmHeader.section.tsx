@@ -7,7 +7,7 @@ export interface IUmkmHeader {}
 const UmkmHeader: React.FC<IUmkmHeader> = ({}) => {
   return (
     <>
-      <div className="mt-10 mb-8 md:mb-4 mx-4 md:mx-24 md:bg-umkm bg-cover h-[300px]">
+      <div className="mt-10 mb-8 md:mb-4 mx-4 md:mx-24 md:bg-umkm bg-cover h-[310px] overflow-hidden">
         <Stack className="gap-0 bg-gradient-to-r from-white via-white/[0.9] to-transparent h-full w-full">
           <Stack className="gap-0">
             <Text className="font-poppins-semibold text-[36px] md:text-[48px] text-primary-text-500">
@@ -17,8 +17,8 @@ const UmkmHeader: React.FC<IUmkmHeader> = ({}) => {
               Kelurahan Banyorang
             </Text>
           </Stack>
-          <VerticalDivider h="sm" />
-          <Text className="text-lg text-primary-text-500 text-justify md:w-[50%] mt-4">
+          {/* <VerticalDivider h="sm" /> */}
+          <Text className="text-lg text-primary-text-500 text-justify sm:line-clamp-5 md:w-[50%] md:line-clamp-none mt-4">
             {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab,
             soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Fugiat quaerat odit provident cum architecto assumenda tenetur

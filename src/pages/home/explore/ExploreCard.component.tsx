@@ -1,7 +1,7 @@
 import { Stack, Text } from "@mantine/core";
 import React from "react";
 import { Link } from "react-router-dom";
-import test from "../../assets/img/umkm2.jpg";
+import test from "../../../assets/img/umkm2.jpg";
 
 export interface IExploreCard {
   src?: string;

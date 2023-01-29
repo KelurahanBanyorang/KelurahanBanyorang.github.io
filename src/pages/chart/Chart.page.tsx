@@ -18,19 +18,19 @@ export interface IChart {}
 // `;
 
 const Chart: React.FC<IChart> = ({}) => {
-  const viewport = useRef<HTMLDivElement>(null);
+  // const viewport = useRef<HTMLDivElement>(null);
   const { array, clear, push } = useArray([]);
   const [rwData, rwActions] = useMap();
   const [ketuaLurahName, setKetuaLurahName] = useState("");
 
-  useEffect(() => {
-    if (viewport != null && rwData.size > 0) {
-      viewport!.current!.scrollTo({
-        left: viewport!.current!.scrollWidth / 4,
-        behavior: "auto"
-      });
-    }
-  }, [rwData]);
+  // useEffect(() => {
+  //   if (viewport != null && rwData.size > 0) {
+  //     viewport!.current!.scrollTo({
+  //       left: viewport!.current!.scrollWidth / 4,
+  //       behavior: "auto"
+  //     });
+  //   }
+  // }, [rwData]);
 
   useEffect(() => {
     let SHEET_ID = "1nrEMirGuiVBm2DJhrkJ8-a_mRmoRTyY_pv0hOGfZnrw";
@@ -101,21 +101,9 @@ const Chart: React.FC<IChart> = ({}) => {
               className="mx-auto mt-14"
             />
           ) : (
-            <ScrollArea
+            <div
               // style={{ width: "100vw" }}
-              type="always"
-              offsetScrollbars
-              // className="mr-10"
-              styles={() => ({
-                scrollbar: {
-                  '&[data-orientation="horizontal"] .mantine-ScrollArea-thumb':
-                    {
-                      backgroundColor: "#03C988"
-                    }
-                }
-              })}
-              className="w-[100vw]"
-              viewportRef={viewport}
+              className="w-[100vw] overflow-x-scroll"
             >
               <Tree
                 nodePadding="4px"
@@ -182,7 +170,7 @@ const Chart: React.FC<IChart> = ({}) => {
                   );
                 })}
               </Tree>
-            </ScrollArea>
+            </div>
           )}
         </div>
       </Stack>

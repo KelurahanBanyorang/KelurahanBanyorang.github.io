@@ -1,13 +1,17 @@
 import { Loader, Stack, Text } from "@mantine/core";
 import React, { useState } from "react";
-import petaDetail from "../../assets/img/peta-detail.jpg";
-import mapThumbnail from "../../assets/img/peta-thumbnail.jpg";
-import MyModal from "../../components/MyModal.component";
+import { DownloadIconOutline } from "../../../assets/icons/Fluent";
+import petaDetail from "../../../assets/img/peta-detail.jpg";
+import mapThumbnail from "../../../assets/img/peta-thumbnail.jpg";
+import ExpandButton from "../../../components/ExpandButton.component";
+import MyModal from "../../../components/MyModal.component";
 
 export interface IProfile {}
 
 const Profile: React.FC<IProfile> = ({}) => {
   const [isMapDetailOpened, setIsMapDetailOpened] = useState(false);
+  const [isProfileExpanded, setIsProfileExpanded] = useState(false);
+
   return (
     <>
       <MyModal
@@ -16,7 +20,13 @@ const Profile: React.FC<IProfile> = ({}) => {
         title={"Detail Peta Kelurahan Banyorang"}
         children={
           <div className="flex flex-col">
-            <img src={petaDetail} className="z-10" />
+            <Stack className="z-10 gap-6">
+              <img src={petaDetail} className="" />
+              <a href={petaDetail} download className="bg-primaryGreen text-white px-3 py-[6px] w-fit rounded-md font-semibold">
+                <DownloadIconOutline color="#FFFFFF" className="inline -mt-1 mr-1" /> 
+                Unduh Gambar
+              </a>
+            </Stack>
             <Loader
               size="xl"
               variant="dots"
@@ -26,7 +36,7 @@ const Profile: React.FC<IProfile> = ({}) => {
           </div>
         }
       />
-      <Stack className="mt-28 mx-[24px] md:mx-[96px]">
+      <Stack className="mt-12 md:mt-28 mx-[24px] md:mx-[96px]">
         <Stack className="gap-0 border-l-[6px] md:border-l-[10px] pl-4 md:pl-6 border-l-primaryBlue">
           <Text className="font-poppins-bold text-[36px] md:text-[46px] text-primary-text-500">
             Profil
@@ -36,11 +46,11 @@ const Profile: React.FC<IProfile> = ({}) => {
           </Text>
         </Stack>
         <div>
-          <div className="flex items-center justify-center float-right ml-6 mb-6">
+          <div className="flex items-center justify-center md:float-right md:ml-6 mb-6">
             <Stack className="filter hover:brightness-50 relative gap-0">
               <img
                 src={mapThumbnail}
-                className={"w-[400px] block cursor-pointer"}
+                className={"w-[400px] block cursor-pointer md:float-right"}
                 alt={"Peta detail kelurahan Banyorang"}
                 onClick={() => setIsMapDetailOpened(true)}
               />
@@ -61,8 +71,7 @@ const Profile: React.FC<IProfile> = ({}) => {
               </Text>
             </Stack>
           </div>
-
-          <Text className="text-lg text-primary-text-500 text-justify">
+          <Text className={`text-lg inline text-primary-text-500 text-justify`}>
             Kelurahan Banyorang merupakan salah satu kelurahan yang ada di
             Kecamatan Tompobulu Kabupaten Bantaeng Provinsi Sulawesi Selatan.
             Nama Kelurahan Banyorang berasal dari kata "banyak orang", nama ini
@@ -86,6 +95,12 @@ const Profile: React.FC<IProfile> = ({}) => {
             Sentra Kopi dan jenis usaha lainnya. Kelurahan Banyorang sendiri
             memiliki 5 Rukun Warga dan 15 Rukun Tetangga.
           </Text>
+
+          {/* <ExpandButton
+            key={"profile"}
+            isExpanded={isProfileExpanded}
+            setIsExpanded={setIsProfileExpanded}
+          /> */}
         </div>
       </Stack>
     </>

@@ -1,4 +1,4 @@
-import { Divider, Grid, Group, Stack, Text } from "@mantine/core";
+import { Divider, Grid, Group, MediaQuery, Stack, Text } from "@mantine/core";
 import React from "react";
 import { Link } from "react-router-dom";
 import {
@@ -18,8 +18,8 @@ export interface IFooterLayout {}
 
 const FooterLayout: React.FC<IFooterLayout> = ({}) => {
   return (
-    <Stack className="mt-[100px] bg-primary-text-500 px-4 md:px-14 pt-10 pb-4 border-t-8 border-r-8 rounded-tr-sm border-primaryGreen mr-8">
-      <div className="flex flex-col md:flex-row gap-4 justify-between w-full mb-6 items-center">
+    <Stack className="mt-[100px] bg-primary-text-500 px-4 md:px-14 pt-10 pb-4 border-t-8 md:border-r-8 md:rounded-tr-sm border-primaryGreen md:mr-8">
+      <div className="flex flex-col md:flex-row gap-4 justify-between w-full mb-2 md:mb-6 items-center">
         {/* <Text className="font-poppins text-[20px] text-primary-text-500">
               KKN Unhas
             </Text> */}
@@ -82,46 +82,49 @@ const FooterLayout: React.FC<IFooterLayout> = ({}) => {
           </a>
         </Group>
       </div>
-      <Grid className="mb-4 mx-0 md:mx-8" columns={12}>
-        <Grid.Col span={12} sm={3}>
-          <FooterDescription
-            title="Website Profil Kelurahan"
-            description="Website profil kelurahan merupakan situs web yang memuat informasi dasar mengenai kelurahan, sejarah, visi dan misi kelurahan, sampai dengan peta wilayah kelurahan."
-          />
-        </Grid.Col>
-        <Grid.Col span={12} sm={3}>
-          <FooterDescription
-            title="Developer"
-            description="Website ini dibuat oleh Mahasiswa KKNT Inovasi Teknologi Tepat Guna Universitas Hasanuddin Gelombang 109 Posko 2 Kelurahan Banyorang pada Januari 2023."
-          />
-          <Link
-            to={"/tentang"}
-            className="text-primaryBlue-300 text-lg tracking-4"
-          >
-            Selengkapnya
-          </Link>
-        </Grid.Col>
-        <Grid.Col span={12} sm={3}>
-          <FooterDescription
-            title="Harapan & Tujuan"
-            description="Situs web profil ini dibuat untuk tujuan promosi dan publisitas kelurahan Banyorang agar lebih dikenal oleh khalayak ramai baik di dalam maupun di luar kelurahan Banyorang."
-          />
-        </Grid.Col>
-        <Grid.Col
-          span={12}
-          sm={3}
 
-          // className="items-center justify-items-center h-fit self-center p-2 pt-10"
-          // className="bg-error-50"
-        >
-          <FooterDescription title="Kode QR Website" description=" " />
-          <img
-            src={qrCode}
-            alt="QR Code Web"
-            className="align-middle w-[50%] self-end"
-          />
-        </Grid.Col>
-      </Grid>
+      <MediaQuery smallerThan={"md"} styles={{ display: "none" }}>
+        <Grid className="mb-4 mx-0 md:mx-8" columns={12}>
+          <Grid.Col span={12} sm={3}>
+            <FooterDescription
+              title="Website Profil Kelurahan"
+              description="Website profil kelurahan merupakan situs web yang memuat informasi dasar mengenai kelurahan, sejarah, visi dan misi kelurahan, sampai dengan peta wilayah kelurahan."
+            />
+          </Grid.Col>
+          <Grid.Col span={12} sm={3}>
+            <FooterDescription
+              title="Developer"
+              description="Website ini dibuat oleh Mahasiswa KKNT Inovasi Teknologi Tepat Guna Universitas Hasanuddin Gelombang 109 Posko 2 Kelurahan Banyorang pada Januari 2023."
+            />
+            <Link
+              to={"/tentang"}
+              className="text-primaryBlue-300 text-lg tracking-4"
+            >
+              Selengkapnya
+            </Link>
+          </Grid.Col>
+          <Grid.Col span={12} sm={3}>
+            <FooterDescription
+              title="Harapan & Tujuan"
+              description="Situs web profil ini dibuat untuk tujuan promosi dan publisitas kelurahan Banyorang agar lebih dikenal oleh khalayak ramai baik di dalam maupun di luar kelurahan Banyorang."
+            />
+          </Grid.Col>
+          <Grid.Col
+            span={12}
+            sm={3}
+
+            // className="items-center justify-items-center h-fit self-center p-2 pt-10"
+            // className="bg-error-50"
+          >
+            <FooterDescription title="Kode QR Website" description=" " />
+            <img
+              src={qrCode}
+              alt="QR Code Web"
+              className="align-middle w-[50%] self-end"
+            />
+          </Grid.Col>
+        </Grid>
+      </MediaQuery>
       <Divider className="w-[60%] self-center" />
       <Text className="text-white text-md text-center">
         &copy; 2023 Kelurahan Banyorang - All rights reserved

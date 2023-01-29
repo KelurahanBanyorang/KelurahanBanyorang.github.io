@@ -5,7 +5,7 @@ import About from "./pages/about/About.page";
 import Chart from "./pages/chart/Chart.page";
 import Gallery from "./pages/gallery/Gallery.page";
 import Home from "./pages/home/Home.page";
-import Test from "./pages/test";
+import NotFound from "./pages/not-found/NotFound";
 import Umkm from "./pages/umkm/Umkm.page";
 import ScrollToTop from "./ScrollToTop";
 
@@ -19,6 +19,7 @@ function App() {
         <Route path="/tentang" element={<About />} />
         <Route path="/galeri" element={<Gallery />} />
         <Route path="/bagan-kelurahan" element={<Chart />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
