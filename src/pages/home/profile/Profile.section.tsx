@@ -20,8 +20,15 @@ const Profile: React.FC<IProfile> = ({}) => {
           <div className="flex flex-col">
             <Stack className="z-10 gap-6">
               <img src={petaDetail} className="" />
-              <a href={petaDetail} download className="bg-primaryGreen text-white px-3 py-[6px] w-fit rounded-md font-semibold">
-                <DownloadIconOutline color="#FFFFFF" className="inline -mt-1 mr-1" /> 
+              <a
+                href={petaDetail}
+                download
+                className="bg-primaryGreen text-white px-3 py-[6px] w-fit rounded-md font-semibold"
+              >
+                <DownloadIconOutline
+                  color="#FFFFFF"
+                  className="inline -mt-1 mr-1"
+                />
                 Unduh Gambar
               </a>
             </Stack>
@@ -71,10 +78,9 @@ const Profile: React.FC<IProfile> = ({}) => {
           </div>
           <Text className={`text-lg inline text-primary-text-500 text-justify`}>
             Kelurahan Banyorang merupakan salah satu kelurahan yang ada di
-            Kecamatan Tompobulu Kabupaten Bantaeng Provinsi Sulawesi Selatan.
-            Nama Kelurahan Banyorang berasal dari kata "banyak orang", nama ini
-            diambil karena Kelurahan Banyorang merupakan kelurahan dengan jumlah
-            penduduk yang banyak serta datang dari berbagai daerah Banyorang
+            Kecamatan Tompobulu Kabupaten Bantaeng Provinsi Sulawesi Selatan. 
+            Asal kata Banyorang sendiri diambil dari nama pohon besar yang
+            terkenal di daerah tersebut yang bernama pohon BANYORO. Banyorang
             adalah salah satu kelurahan yang terletak di sebelah utara kabupaten
             bantaeng, tepatnya di ibu kota kecamatan Tompobulu dengan jarak ibu
             kota kabupaten ± 23 Km2 dengan ketinggian 600-1200 m dari permukaan
