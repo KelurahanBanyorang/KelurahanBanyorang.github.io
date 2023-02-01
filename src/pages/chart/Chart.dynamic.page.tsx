@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Tree, TreeNode } from "react-organizational-chart";
 import MainLayout from "../../layouts/MainLayout.layout";
 import ChartNode from "./ChartNode.component";
-import ketuaLurahImg from "../../assets/img/ketua-lurah.jpg";
+// import ketuaLurahImg from "../../assets/img/ketua-lurah.jpg";
 import useArray from "../../hooks/useArray";
 import useMap from "../../hooks/useMap";
 // import logoBantaeng from "../../assets/img/logo-bantaeng-hq.png";
@@ -19,9 +19,15 @@ export interface IChart {}
 
 const Chart: React.FC<IChart> = ({}) => {
   // const viewport = useRef<HTMLDivElement>(null);
-  const { array, clear, push } = useArray([]);
+  const { array: arrayRw, clear: clearRw, push: pushRw } = useArray([]);
+  const { array: arrayRw1, clear: clearRw1, push: pushRw1 } = useArray([]);
+  const { array: arrayRw2, clear: clearRw2, push: pushRw2 } = useArray([]);
+  const { array: arrayRw3, clear: clearRw3, push: pushRw3 } = useArray([]);
+  const { array: arrayRw4, clear: clearRw4, push: pushRw4 } = useArray([]);
+  const { array: arrayRw5, clear: clearRw5, push: pushRw5 } = useArray([]);
   const [rwData, rwActions] = useMap();
   const [ketuaLurahName, setKetuaLurahName] = useState("");
+  const [ketuaLurahImg, setKetuaLurahImg] = useState<any>(null);
 
   // useEffect(() => {
   //   if (viewport != null && rwData.size > 0) {
@@ -32,9 +38,12 @@ const Chart: React.FC<IChart> = ({}) => {
   //   }
   // }, [rwData]);
 
+  const SHEET_ID = "1Vxhi_7CaqnTCbx-54aDUfVV4Qf0PKADL93DxhOz-3KA";
+
+  const patternFileIdGDrive = /\/file\/d\/([^\/]+)/;
+  // Set Nama Ketua Lurah
   useEffect(() => {
-    let SHEET_ID = "1nrEMirGuiVBm2DJhrkJ8-a_mRmoRTyY_pv0hOGfZnrw";
-    let SHEET_TITLE = `Struktur Kelurahan`;
+    let SHEET_TITLE = `Lurah`;
 
     let FULL_URL =
       "https://docs.google.com/spreadsheets/d/" +
@@ -47,36 +56,105 @@ const Chart: React.FC<IChart> = ({}) => {
       .then((res) => res.text())
       .then((rep) => {
         let data = JSON.parse(rep.substring(47).slice(0, -2));
-        clear();
-        // rwActions.reset()
-
         setKetuaLurahName(data.table.rows[1].c[0].v);
-        for (let i = 2; i < data.table.rows.length; i++) {
+        const getFileId = patternFileIdGDrive.exec(
+          data.table.rows[1].c[3] == null ? null : data.table.rows[1].c[3].v
+        );
+
+        setKetuaLurahImg(
+          getFileId == null
+            ? null
+            : "https://drive.google.com/uc?export=view&id=" + getFileId[1]
+        );
+      });
+  }, []);
+
+  // RW
+  useEffect(() => {
+    let SHEET_TITLE = `RW`;
+
+    let FULL_URL =
+      "https://docs.google.com/spreadsheets/d/" +
+      SHEET_ID +
+      "/gviz/tq?sheet=" +
+      SHEET_TITLE;
+
+    // if (baganData.length <= 0) {
+    fetch(FULL_URL)
+      .then((res) => res.text())
+      .then((rep) => {
+        let data = JSON.parse(rep.substring(47).slice(0, -2));
+        clearRw();
+        for (let i = 1; i < data.table.rows.length; i++) {
           let element = data.table.rows[i];
 
-          push(element);
+          const getFileId = patternFileIdGDrive.exec(
+            data.table.rows[1].c[3] == null ? "" : element.c[3].v
+          );
+
+          pushRw({
+            name: element.c[0] == null ? "" : element.c[0].v.trim(),
+            image:
+              getFileId == null
+                ? null
+                : "https://drive.google.com/uc?export=view&id=" + getFileId[1]
+          });
         }
       });
   }, []);
 
+  // RW 1
   useEffect(() => {
-    rwActions.reset();
+    let SHEET_TITLE = `RT RW 1`;
 
-    for (let i = 0; i < array.length; i++) {
-      const element = array[i];
+    let FULL_URL =
+      "https://docs.google.com/spreadsheets/d/" +
+      SHEET_ID +
+      "/gviz/tq?sheet=" +
+      SHEET_TITLE;
 
-      let rw = element.c[2].v;
-      if (rwData.has(rw)) {
-        let tempArr: Array<any> = rwData.get(rw) as any;
-        tempArr.push(element);
-        rwActions.set(rw, tempArr);
-      } else {
-        let tempArr: Array<any> = [];
-        rwActions.set(rw, tempArr);
-      }
-    }
-  }, [array]);
+    // if (baganData.length <= 0) {
+    fetch(FULL_URL)
+      .then((res) => res.text())
+      .then((rep) => {
+        let data = JSON.parse(rep.substring(47).slice(0, -2));
+        clearRw1();
+        for (let i = 1; i < data.table.rows.length; i++) {
+          let element = data.table.rows[i];
 
+          const getFileId = patternFileIdGDrive.exec(
+            data.table.rows[1].c[3] == null ? "" : element.c[3].v
+          );
+
+          pushRw1({
+            name: element.c[0] == null ? "" : element.c[0].v.trim(),
+            image:
+              getFileId == null
+                ? null
+                : "https://drive.google.com/uc?export=view&id=" + getFileId[1]
+          });
+        }
+      });
+  }, []);
+
+  // useEffect(() => {
+  //   rwActions.reset();
+
+  //   for (let i = 0; i < array.length; i++) {
+  //     const element = array[i];
+
+  //     let rw = element.c[2].v;
+  //     if (rwData.has(rw)) {
+  //       let tempArr: Array<any> = rwData.get(rw) as any;
+  //       tempArr.push(element);
+  //       rwActions.set(rw, tempArr);
+  //     } else {
+  //       let tempArr: Array<any> = [];
+  //       rwActions.set(rw, tempArr);
+  //     }
+  //   }
+  // }, [array]);
+  console.log("Ketua lurah ", ketuaLurahImg);
   return (
     <MainLayout activePage="bagan">
       <Stack className="mb-8">
@@ -93,7 +171,7 @@ const Chart: React.FC<IChart> = ({}) => {
         </Stack>
         <div className="overflow-hidden mt-10 relative">
           {/* <img src={logoBantaeng} className="absolute h-full opacity-20 left-1/4" /> */}
-          {rwData.size == 0 ? (
+          {arrayRw.length == 0 ? (
             <Loader
               size="xl"
               variant="dots"
@@ -130,52 +208,34 @@ const Chart: React.FC<IChart> = ({}) => {
                 }
                 lineHeight="72px"
               >
-                {Array.from(rwData.entries()).map((entry: any) => {
-                  const [key, rwArr] = entry;
+                {arrayRw.map((rwArrElement: any, e: number) => {
                   return (
                     <TreeNode
                       label={
                         <ChartNode
-                          key={key}
+                          key={`RW ${e + 1}`}
                           nodeOrder={1}
-                          name={
-                            rwArr[0] == null ? "" : (rwArr[0].c[0].v as any)
-                          }
-                          position={
-                            rwArr[0] == null ? "" : (rwArr[0].c[1].v as any)
-                          }
+                          name={rwArrElement.name}
+                          img={rwArrElement.image}
+                          position={`RW ${e + 1}`}
                         />
                       }
                     >
-                      {rwArr != null && rwArr.length > 0
-                        ? rwArr.map((rwArrElement: any, e: number) => {
-                            return (
-                              <>
-                                {e > 0 ? (
-                                  <TreeNode
-                                    key={key + e}
-                                    label={
-                                      <ChartNode
-                                        key={e}
-                                        nodeOrder={2}
-                                        name={
-                                          rwArrElement == null
-                                            ? ""
-                                            : (rwArrElement.c[0].v as any)
-                                        }
-                                        position={
-                                          rwArrElement == null
-                                            ? ""
-                                            : (rwArrElement.c[1].v as any)
-                                        }
-                                      />
-                                    }
-                                  />
-                                ) : null}
-                              </>
-                            );
-                          })
-                        : null}
+                      {arrayRw1.map((rwArrElement: any, e: number) => {
+                        return (
+                          <TreeNode
+                            label={
+                              <ChartNode
+                                key={`RW ${e + 1}`}
+                                nodeOrder={1}
+                                name={rwArrElement.name}
+                                img={rwArrElement.image}
+                                position={`RW ${e + 1}`}
+                              />
+                            }
+                          ></TreeNode>
+                        );
+                      })}
                     </TreeNode>
                   );
                 })}

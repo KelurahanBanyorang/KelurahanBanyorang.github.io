@@ -18,7 +18,7 @@ const ChartNode: React.FC<IChartNode> = ({ nodeOrder, img=noImage, name="Pak .."
       }`}
     >
       <img
-        src={img}
+        src={img==null? noImage : img}
         className={`${
           nodeOrder == 0
             ? "md:w-20 md:h-20 h-14 w-14"
