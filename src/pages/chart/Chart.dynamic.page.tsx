@@ -103,6 +103,40 @@ const Chart: React.FC<IChart> = ({}) => {
       });
   }, []);
 
+  // RW 5
+  useEffect(() => {
+    let SHEET_TITLE = `RT RW 5`;
+
+    let FULL_URL =
+      "https://docs.google.com/spreadsheets/d/" +
+      SHEET_ID +
+      "/gviz/tq?sheet=" +
+      SHEET_TITLE;
+
+    // if (baganData.length <= 0) {
+    fetch(FULL_URL)
+      .then((res) => res.text())
+      .then((rep) => {
+        let data = JSON.parse(rep.substring(47).slice(0, -2));
+        clearRw5();
+        for (let i = 1; i < data.table.rows.length; i++) {
+          let element = data.table.rows[i];
+
+          const getFileId = patternFileIdGDrive.exec(
+            data.table.rows[1].c[3] == null ? "" : element.c[3].v
+          );
+
+          pushRw5({
+            name: element.c[0] == null ? "" : element.c[0].v.trim(),
+            image:
+              getFileId == null
+                ? null
+                : "https://drive.google.com/uc?export=view&id=" + getFileId[1]
+          });
+        }
+      });
+  }, []);
+
   // RW 1
   useEffect(() => {
     let SHEET_TITLE = `RT RW 1`;
@@ -137,24 +171,107 @@ const Chart: React.FC<IChart> = ({}) => {
       });
   }, []);
 
-  // useEffect(() => {
-  //   rwActions.reset();
+  // RW 2
+  useEffect(() => {
+    let SHEET_TITLE = `RT RW 2`;
 
-  //   for (let i = 0; i < array.length; i++) {
-  //     const element = array[i];
+    let FULL_URL =
+      "https://docs.google.com/spreadsheets/d/" +
+      SHEET_ID +
+      "/gviz/tq?sheet=" +
+      SHEET_TITLE;
 
-  //     let rw = element.c[2].v;
-  //     if (rwData.has(rw)) {
-  //       let tempArr: Array<any> = rwData.get(rw) as any;
-  //       tempArr.push(element);
-  //       rwActions.set(rw, tempArr);
-  //     } else {
-  //       let tempArr: Array<any> = [];
-  //       rwActions.set(rw, tempArr);
-  //     }
-  //   }
-  // }, [array]);
-  console.log("Ketua lurah ", ketuaLurahImg);
+    // if (baganData.length <= 0) {
+    fetch(FULL_URL)
+      .then((res) => res.text())
+      .then((rep) => {
+        let data = JSON.parse(rep.substring(47).slice(0, -2));
+        clearRw2();
+        for (let i = 1; i < data.table.rows.length; i++) {
+          let element = data.table.rows[i];
+
+          const getFileId = patternFileIdGDrive.exec(
+            data.table.rows[1].c[3] == null ? "" : element.c[3].v
+          );
+
+          pushRw2({
+            name: element.c[0] == null ? "" : element.c[0].v.trim(),
+            image:
+              getFileId == null
+                ? null
+                : "https://drive.google.com/uc?export=view&id=" + getFileId[1]
+          });
+        }
+      });
+  }, []);
+
+  // RW 3
+  useEffect(() => {
+    let SHEET_TITLE = `RT RW 3`;
+
+    let FULL_URL =
+      "https://docs.google.com/spreadsheets/d/" +
+      SHEET_ID +
+      "/gviz/tq?sheet=" +
+      SHEET_TITLE;
+
+    // if (baganData.length <= 0) {
+    fetch(FULL_URL)
+      .then((res) => res.text())
+      .then((rep) => {
+        let data = JSON.parse(rep.substring(47).slice(0, -2));
+        clearRw3();
+        for (let i = 1; i < data.table.rows.length; i++) {
+          let element = data.table.rows[i];
+
+          const getFileId = patternFileIdGDrive.exec(
+            data.table.rows[1].c[3] == null ? "" : element.c[3].v
+          );
+
+          pushRw3({
+            name: element.c[0] == null ? "" : element.c[0].v.trim(),
+            image:
+              getFileId == null
+                ? null
+                : "https://drive.google.com/uc?export=view&id=" + getFileId[1]
+          });
+        }
+      });
+  }, []);
+
+  // RW 4
+  useEffect(() => {
+    let SHEET_TITLE = `RT RW 4`;
+
+    let FULL_URL =
+      "https://docs.google.com/spreadsheets/d/" +
+      SHEET_ID +
+      "/gviz/tq?sheet=" +
+      SHEET_TITLE;
+
+    // if (baganData.length <= 0) {
+    fetch(FULL_URL)
+      .then((res) => res.text())
+      .then((rep) => {
+        let data = JSON.parse(rep.substring(47).slice(0, -2));
+        clearRw4();
+        for (let i = 1; i < data.table.rows.length; i++) {
+          let element = data.table.rows[i];
+
+          const getFileId = patternFileIdGDrive.exec(
+            data.table.rows[1].c[3] == null ? "" : element.c[3].v
+          );
+
+          pushRw4({
+            name: element.c[0] == null ? "" : element.c[0].v.trim(),
+            image:
+              getFileId == null
+                ? null
+                : "https://drive.google.com/uc?export=view&id=" + getFileId[1]
+          });
+        }
+      });
+  }, []);
   return (
     <MainLayout activePage="bagan">
       <Stack className="mb-8">
@@ -208,34 +325,36 @@ const Chart: React.FC<IChart> = ({}) => {
                 }
                 lineHeight="72px"
               >
-                {arrayRw.map((rwArrElement: any, e: number) => {
+                {arrayRw.map((rwArrElement: any, idxRw: number) => {
                   return (
                     <TreeNode
                       label={
                         <ChartNode
-                          key={`RW ${e + 1}`}
+                          key={`RW ${idxRw + 1}`}
                           nodeOrder={1}
                           name={rwArrElement.name}
                           img={rwArrElement.image}
-                          position={`RW ${e + 1}`}
+                          position={`RW ${idxRw + 1}`}
                         />
                       }
                     >
-                      {arrayRw1.map((rwArrElement: any, e: number) => {
-                        return (
-                          <TreeNode
-                            label={
-                              <ChartNode
-                                key={`RW ${e + 1}`}
-                                nodeOrder={1}
-                                name={rwArrElement.name}
-                                img={rwArrElement.image}
-                                position={`RW ${e + 1}`}
-                              />
-                            }
-                          ></TreeNode>
-                        );
-                      })}
+                      {[arrayRw1, arrayRw2, arrayRw3, arrayRw4, arrayRw5][idxRw].map(
+                        (rtArrElement: any, idxRt: number) => {
+                          return (
+                            <TreeNode
+                              label={
+                                <ChartNode
+                                  key={`RW ${idxRt + 1}`}
+                                  nodeOrder={1}
+                                  name={rtArrElement.name}
+                                  img={rtArrElement.image}
+                                  position={`RW ${idxRt + 1}`}
+                                />
+                              }
+                            ></TreeNode>
+                          );
+                        }
+                      )}
                     </TreeNode>
                   );
                 })}
