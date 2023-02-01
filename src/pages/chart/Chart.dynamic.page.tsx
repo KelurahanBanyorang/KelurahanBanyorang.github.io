@@ -297,7 +297,7 @@ const Chart: React.FC<IChart> = ({}) => {
             />
           ) : (
             <ScrollArea
-              style={{ width: "100vw", height: "700px" }}
+              style={{ width: "100vw"}}
               type="always"
               offsetScrollbars
               // className="mr-10"
