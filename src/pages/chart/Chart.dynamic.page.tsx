@@ -101,9 +101,19 @@ const Chart: React.FC<IChart> = ({}) => {
               className="mx-auto mt-14"
             />
           ) : (
-            <div
-              // style={{ width: "100vw" }}
-              className="w-[100vw] overflow-x-scroll"
+            <ScrollArea
+              style={{ width: "100vw", height: "700px" }}
+              type="always"
+              offsetScrollbars
+              // className="mr-10"
+              styles={() => ({
+                scrollbar: {
+                  '&[data-orientation="horizontal"] .mantine-ScrollArea-thumb':
+                    {
+                      backgroundColor: "#03C988"
+                    }
+                }
+              })}
             >
               <Tree
                 nodePadding="4px"
@@ -170,7 +180,7 @@ const Chart: React.FC<IChart> = ({}) => {
                   );
                 })}
               </Tree>
-            </div>
+            </ScrollArea>
           )}
         </div>
       </Stack>

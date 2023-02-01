@@ -2,7 +2,7 @@ import { HashRouter, Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import "./fonts/Poppins/Poppins-Medium.ttf";
 import About from "./pages/about/About.page";
-import Chart from "./pages/chart/Chart.static.page";
+import Chart from "./pages/chart/Chart.dynamic.page";
 import Gallery from "./pages/gallery/Gallery.page";
 import Home from "./pages/home/Home.page";
 import NotFound from "./pages/not-found/NotFound";
