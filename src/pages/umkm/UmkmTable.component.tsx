@@ -248,9 +248,15 @@ const UmkmTable: React.FC<IUmkmTableProps> = ({
                   {isEmpty ? (
                     <tr className={`h-40`}>
                       <td colSpan={tableHeadings.length + 1}>
-                        <Text weight={"semibold"} size="lg" align="center">
+                        {/* <Text weight={"semibold"} size="lg" align="center">
                           {noDataMsg}
-                        </Text>
+                        </Text> */}
+            <Loader
+              size="xl"
+              variant="dots"
+              color={"#00337C"}
+              className="mx-auto mt-14"
+            />
                       </td>
                     </tr>
                   ) : (

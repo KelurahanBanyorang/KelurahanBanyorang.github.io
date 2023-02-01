@@ -12,7 +12,7 @@ const HeaderLayout: React.FC<IHeaderLayout> = ({ activePage }) => {
   const [isBurgerOpened, setIsBurgerOpened] = useState(false);
   return (
     <Stack className="items-center sticky top-0 z-50 bg-white">
-      <Group className="w-full ml-14 justify-between py-3 md:border-b border-secondary-500 pr-12 ">
+      <Group className="w-full pl-4 md:pl-8 justify-between py-3 md:border-b border-secondary-500 pr-12 ">
         <Group
           className="relative cursor-pointer"
           onClick={() => navigate("/")}

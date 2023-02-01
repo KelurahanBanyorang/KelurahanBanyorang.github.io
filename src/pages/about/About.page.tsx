@@ -112,8 +112,10 @@ const About: React.FC<IAbout> = ({}) => {
               Teknis Website
             </Text>
             <Text className="text-lg text-primary-text-500 text-justify">
-              Website ini dibuat menggunakan bahasa pemrograman Typescript dan
-              Framework React, dideploy pada Github Pages.
+              Untuk front-end nya, website ini dibuat menggunakan bahasa
+              pemrograman Typescript dan Framework React. Website ini tidak
+              memiliki back-end, tetapi menggunakan Google Spreadsheet sebagai
+              alternatif database. Website dideploy pada Github Pages
             </Text>
           </Stack>
           <Stack className="gap-2">
@@ -121,7 +123,7 @@ const About: React.FC<IAbout> = ({}) => {
               Lama Pengerjaan Website
             </Text>
             <Text className="text-lg text-primary-text-500 text-justify">
-              Website dikerjakan selama 2 minggu pada Januari 2023.
+              Website dikerjakan selama 2 minggu pada Januari 2023 minggu ke-2 sampai minggu ke-3.
             </Text>
           </Stack>
         </Stack>

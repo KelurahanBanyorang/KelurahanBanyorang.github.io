@@ -35,8 +35,8 @@ const ChartNode: React.FC<IChartNode> = ({ nodeOrder, img=noImage, name="Pak .."
         alt="Foto RT/RW"
       />
       <Stack className="gap-0">
-        <Text className="text-primary-text-500 text-[18px] font-poppins-semibold">{position}</Text>
-        <Text className="text-secondary-text-500 font-semibold -mt-1 text-md">{name}</Text>
+        <Text className={`text-primary-text-500 text-sm sm:text-lg md:text-[18px] font-poppins-semibold`}>{position}</Text>
+        <Text className="text-secondary-text-500 font-semibold -mt-1 text-sm md:text-md">{name}</Text>
       </Stack>
     </Stack>
   );

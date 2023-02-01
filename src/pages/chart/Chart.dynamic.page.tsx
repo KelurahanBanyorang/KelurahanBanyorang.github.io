@@ -25,18 +25,8 @@ const Chart: React.FC<IChart> = ({}) => {
   const { array: arrayRw3, clear: clearRw3, push: pushRw3 } = useArray([]);
   const { array: arrayRw4, clear: clearRw4, push: pushRw4 } = useArray([]);
   const { array: arrayRw5, clear: clearRw5, push: pushRw5 } = useArray([]);
-  const [rwData, rwActions] = useMap();
   const [ketuaLurahName, setKetuaLurahName] = useState("");
   const [ketuaLurahImg, setKetuaLurahImg] = useState<any>(null);
-
-  // useEffect(() => {
-  //   if (viewport != null && rwData.size > 0) {
-  //     viewport!.current!.scrollTo({
-  //       left: viewport!.current!.scrollWidth / 4,
-  //       behavior: "auto"
-  //     });
-  //   }
-  // }, [rwData]);
 
   const SHEET_ID = "1Vxhi_7CaqnTCbx-54aDUfVV4Qf0PKADL93DxhOz-3KA";
 
@@ -348,7 +338,7 @@ const Chart: React.FC<IChart> = ({}) => {
                                   nodeOrder={1}
                                   name={rtArrElement.name}
                                   img={rtArrElement.image}
-                                  position={`RW ${idxRt + 1}`}
+                                  position={`RT ${idxRt + 1}`}
                                 />
                               }
                             ></TreeNode>

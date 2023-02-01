@@ -3,14 +3,12 @@ import React, { useState } from "react";
 import { DownloadIconOutline } from "../../../assets/icons/Fluent";
 import petaDetail from "../../../assets/img/peta-detail.jpg";
 import mapThumbnail from "../../../assets/img/peta-thumbnail.jpg";
-import ExpandButton from "../../../components/ExpandButton.component";
 import MyModal from "../../../components/MyModal.component";
 
 export interface IProfile {}
 
 const Profile: React.FC<IProfile> = ({}) => {
   const [isMapDetailOpened, setIsMapDetailOpened] = useState(false);
-  const [isProfileExpanded, setIsProfileExpanded] = useState(false);
 
   return (
     <>
