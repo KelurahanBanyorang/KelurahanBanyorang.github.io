@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.52a225c1.css",
-    "main.js": "/static/js/main.e725dd20.js",
+    "main.js": "/static/js/main.ec9949b8.js",
     "static/js/787.d983846b.chunk.js": "/static/js/787.d983846b.chunk.js",
     "static/media/peta-detail.jpg": "/static/media/peta-detail.bd020c6eafbd90d8094b.jpg",
     "static/media/umkm2.jpg": "/static/media/umkm2.a492f09f2c65e3004b92.jpg",
@@ -21,11 +21,11 @@
     "static/media/unhas_logo.png": "/static/media/unhas_logo.87504985dda567bdc0c2.png",
     "index.html": "/index.html",
     "main.52a225c1.css.map": "/static/css/main.52a225c1.css.map",
-    "main.e725dd20.js.map": "/static/js/main.e725dd20.js.map",
+    "main.ec9949b8.js.map": "/static/js/main.ec9949b8.js.map",
     "787.d983846b.chunk.js.map": "/static/js/787.d983846b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.52a225c1.css",
-    "static/js/main.e725dd20.js"
+    "static/js/main.ec9949b8.js"
   ]
 }
