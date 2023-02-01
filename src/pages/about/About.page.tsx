@@ -121,7 +121,7 @@ const About: React.FC<IAbout> = ({}) => {
               Lama Pengerjaan Website
             </Text>
             <Text className="text-lg text-primary-text-500 text-justify">
-              Website dikerjakan selama 3 minggu pada Januari 2023.
+              Website dikerjakan selama 2 minggu pada Januari 2023.
             </Text>
           </Stack>
         </Stack>

@@ -79,10 +79,10 @@ const Profile: React.FC<IProfile> = ({}) => {
             penduduk yang banyak serta datang dari berbagai daerah Banyorang
             adalah salah satu kelurahan yang terletak di sebelah utara kabupaten
             bantaeng, tepatnya di ibu kota kecamatan Tompobulu dengan jarak ibu
-            kota kabupaten ± 22 Km2 dengan ketinggian 600-1200 m dari permukaan
+            kota kabupaten ± 23 Km2 dengan ketinggian 600-1200 m dari permukaan
             laut.
             <br /> <br />
-            Luas wilayah kelurahan ini seluas 395,83 km. Kelurahan ini
+            Luas wilayah kelurahan ini seluas 5.06 km persegi. Kelurahan ini
             berbatasan dengan kabupaten Bulukumba dan kecamatan Eramerasa.
             Sebelah timur berbatasan dengan kabupaten Bulukumba. Sebelah selatan
             berbatasan dengan kecamatan Gantarang Keke. Dan Sebelah Barat
